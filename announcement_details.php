@@ -7,7 +7,7 @@
             include("./navbar.php");
         ?>
     </nav>
-
+ 
 
     <!-- Header -->
     <header class="ex-header bg-gray">
@@ -20,12 +20,11 @@
                     <p class="m-0">
                             FEBRUARY 20 2024
                         </p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
+                </div> 
+            </div>
+        </div>
+    </header>
     <!-- end of header -->
-
 
     <!-- Header -->
     <div class="ex-basic-1 pb-5 pt-3">
