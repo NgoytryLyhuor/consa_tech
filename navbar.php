@@ -20,7 +20,7 @@
                 <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'services.php') echo 'active'; ?>" href="./services.php">Services</a>
             </li>
             <li class="nav-item">
-                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'announcement.php') echo 'active'; ?>" href="./announcement">Announcements</a>
+                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'announcement.php') echo 'active'; ?>" href="./announcement.php">Announcements</a>
             </li>
         </ul>
         <span class="nav-item">
