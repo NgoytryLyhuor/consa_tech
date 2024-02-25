@@ -1,0 +1,96 @@
+<?php
+include("function.php");
+$id = $_SESSION['id'];
+include("header.php");
+?>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <?php
+                include("left_side_bar.php");
+            ?>
+            <!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card-body">
+                                <h4 class="card-title">News Insert Page</h4><br><br>
+
+                                <form action="" method="post" enctype="multipart/form-data">
+
+                                    <div class="row mb-3">
+                                        <label for="title" class="col-sm-2 col-form-label">Title</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="text" id="title" name="title" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="description" class="col-sm-2 col-form-label">Decription</label>
+                                        <div class="col-sm-10">
+                                            <textarea name="description" id="elm1"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="image" class="col-sm-2 col-form-label">Banner</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control image1" type="file" id="image" name="banner"required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="image" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-10">
+                                            <img class="rounded me-2 showImage1" alt="200x200" height="200" src="./assets/images/no_image.png" data-holder-rendered="true">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="image" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-10">
+                                            <button type="submit" name="btn_news_insert" class="btn btn-info waves-effect waves-linght">Insert News Data</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- End Page-content -->
+                <?php
+                    include("footer.php");
+                ?>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        <!-- Right Sidebar -->
+        <?php
+            include("right_side_bar.php");
+        ?>
+        <!-- /Right-bar -->
+    </body>
+
+</html>
+
+<script>
+
+    $(document).ready(function(){
+        $(".image1").change(function(e){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $(".showImage1").attr('src',e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
+    });
+
+</script>
