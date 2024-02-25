@@ -28,12 +28,12 @@
 
 
     <!-- Header -->
-    <div class="ex-basic-1 pb-5 ">
+    <div class="ex-basic-1 pb-5 pt-3">
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
 
-                    <img width="100%" src="https://business-cambodia.com/cms/assets/61ca741b-4818-495f-8cdf-656d18e150d5" alt="">
+                    <img width="100%" class="img_border_radius" src="https://business-cambodia.com/cms/assets/61ca741b-4818-495f-8cdf-656d18e150d5" alt="">
 
                     <div class="container-fluid p-0 mt-3">
                         <p style="font-size: 18px;">
