@@ -1479,7 +1479,7 @@ select {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+} 
 
 .announce_des{
 	display: -webkit-box;
