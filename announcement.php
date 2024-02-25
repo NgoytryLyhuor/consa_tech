@@ -32,7 +32,7 @@
                         <div class="row announce_box">
                             <div class="col-md-4">
                                 <div class="container-fluid p-0 overflow-hidden" style="border-radius: 10px;">
-                                    <img width="100%" class="img_border_radius" style="object-fit: cover;" height="250px" src="https://business-cambodia.com/cms/assets/61ca741b-4818-495f-8cdf-656d18e150d5" alt="">
+                                    <img width="100%" class="img_border_radius" style="object-fit: cover;" height="200px" src="https://business-cambodia.com/cms/assets/61ca741b-4818-495f-8cdf-656d18e150d5" alt="">
                                 </div>
                             </div>
                             <div class="col-md-8 position-relative">

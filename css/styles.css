@@ -1483,14 +1483,15 @@ select {
 
 .announce_des{
 	display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .announce_date{
-	font-size: 14px;
+	font-size: 13px;
+	color: #999999;
 	position: absolute;
 	bottom: 0;
 }
@@ -1558,7 +1559,7 @@ select {
 	}
 
 	.announce_des{
-		display: none;
+		display: none !important;
 	}
 }
 
