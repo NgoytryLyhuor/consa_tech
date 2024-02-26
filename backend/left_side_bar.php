@@ -22,24 +22,35 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
-                <li class="menu-title">Menu</li>
+                <li class="menu-title">Dashboard</li>
                 <li>
                     <a class=" waves-effect" href="./index.php">
                         <i class="fa-solid fa-house"></i>
-                        <span>Dashboard</span>
+                        <span>Home</span>
                     </a>
                 </li>
-                <li>
-                    <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fa-solid fa-newspaper"></i>
-                        <span>News</span>
-                        <span style="float: right;"><i style="font-size: 12px;" class="fa-solid fa-chevron-down"></i></span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="./tbl_news_view.php">View</a></li>
-                        <li><a href="./tbl_news_insert.php">Insert</a></li>
-                    </ul>
-                </li>
+
+                <!-- home -->
+                    <li class="menu-title">Home Page</li>
+                    <li>
+                        <a class=" waves-effect" href="./home_title.php">
+                            <i class="fa-solid fa-t"></i>
+                            <span>Home Title</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="waves-effect">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <span>News</span>
+                            <span style="float: right;"><i style="font-size: 12px;" class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="./tbl_news_view.php">View</a></li>
+                            <li><a href="./tbl_news_insert.php">Insert</a></li>
+                        </ul>
+                    </li>
+                <!-- home -->
+
                 <li class="menu-title">Pages</li>
                 <li>
                     <a class="waves-effect" href="./tbl_message_view.php">
