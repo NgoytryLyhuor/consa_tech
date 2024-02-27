@@ -33,26 +33,26 @@ include("left_side_bar.php");
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab" aria-selected="false">
-                                        <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                        <span class="d-none d-sm-block">Who We Are</span>    
+                                        <span style="color:#f99b21" class="d-block d-sm-none"><i class="fa-solid fa-w"></i></span>
+                                        <span class="d-none d-sm-block"><span style="color:#f99b21"><i class="fa-solid fa-w"></i></span> Who We Are</span>    
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab" aria-selected="false">
-                                        <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                        <span class="d-none d-sm-block">Vision</span>    
+                                        <span style="color:#f99b21" class="d-block d-sm-none"><i class="fa-solid fa-v"></i></span>
+                                        <span class="d-none d-sm-block"><span style="color:#f99b21"><i class="fa-solid fa-v"></i></span> Vision</span>    
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-bs-toggle="tab" href="#messages" role="tab" aria-selected="false">
-                                        <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                        <span class="d-none d-sm-block">Mission</span>    
+                                        <span style="color:#f99b21" class="d-block d-sm-none"><i class="fa-solid fa-m"></i></span>
+                                        <span class="d-none d-sm-block"><span style="color:#f99b21"><i class="fa-solid fa-m"></i></span> Mission</span>    
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-bs-toggle="tab" href="#settings" role="tab" aria-selected="true">
-                                        <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                        <span class="d-none d-sm-block">Our Goal</span>    
+                                        <span style="color:#f99b21" class="d-block d-sm-none"><i class="fa-solid fa-g"></i></span>
+                                        <span class="d-none d-sm-block"><span style="color:#f99b21"><i class="fa-solid fa-g"></i></span> Our Goal</span>    
                                     </a>
                                 </li>
                             </ul>
