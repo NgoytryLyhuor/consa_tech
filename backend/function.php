@@ -104,13 +104,21 @@ function user_update(){
         $sql_update = "UPDATE tbl_admin SET username = '$username', profile = '$profile', email = '$email' WHERE id = $id";
         $result = $con->query($sql_update);
         if ($result == TRUE) {
-            header("location:profile.php?success=1");
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+            ';
             return 0;
         }
     }
 }user_update();
-
-
 
 // Message Insert
 function message_insert(){
@@ -176,7 +184,7 @@ function news_insert() {
     }
 }news_insert();
 
-// News Update
+// News_Update
 function news_update(){
     global $con;
     if (isset($_POST['btn_news_update'])) {
@@ -250,6 +258,37 @@ function home_title(){
         }
     }
 }home_title();
+
+// about_us-------------------------------------------
+
+// about_us
+function about_us(){
+    global $con;
+    if (isset($_POST['btn_about_us'])) {
+
+        $who = trim($_POST['who']);
+        $vision = trim($_POST['vision']);
+        $mission = trim($_POST['mission']);
+        $goal = trim($_POST['goal']);
+        
+        $sql_update = "UPDATE tbl_about_us SET who='$who',vision='$vision',mission='$mission',goal='$goal' WHERE id = 1";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+            ';
+        }
+    }
+}about_us();
+
 
 
 

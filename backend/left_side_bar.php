@@ -9,8 +9,8 @@
             $row = mysqli_fetch_assoc($result);
             echo '   
                 <div class="">
-                    <img src="assets/images/users/'.$row['profile'].'" alt="" class="avatar-md rounded-circle">
-                </div>
+                    <img data-bs-toggle="modal" data-bs-target="#show_image" src="assets/images/users/'.$row['profile'].'" alt="" class="avatar-md rounded-circle" style="cursor: pointer;">
+                </div> 
                 <div class="mt-3">
                     <h4 class="font-size-16 mb-1 text-uppercase">'.$row['username'].'</h4>
                     <span class="text-muted"><i class="fa-regular fa-circle-dot" style="color: #6fd088;"></i> Online</span>
@@ -49,6 +49,16 @@
                             <li><a href="./tbl_news_insert.php">Insert</a></li>
                         </ul>
                     </li>
+                <!-- home -->
+
+                <!-- home -->
+                    <li class="menu-title">About Us Page</li>
+                        <li>
+                            <a class=" waves-effect" href="./about_us.php">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>About Us</span>
+                            </a>
+                        </li>
                 <!-- home -->
 
                 <li class="menu-title">Pages</li>

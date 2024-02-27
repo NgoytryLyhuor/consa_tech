@@ -113,3 +113,21 @@
                     </div>
                 </header>
             </header>
+
+            <!-- The Modal -->
+            <div class="modal" id="show_image" style="z-index: 10000000000000;">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal footer -->
+                        <div class="modal-body">
+                            <?php
+                                echo '
+                                    <img style="object-fit:cover" width="100%" class="rounded " src="./assets/images/users/'.$row['profile'].'" alt="">
+                                ';
+                            ?>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
