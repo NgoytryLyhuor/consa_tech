@@ -1497,6 +1497,17 @@ select {
 	bottom: 0;
 }
 
+.main_slide{
+	height: 500px;
+	overflow: hidden;
+	padding-bottom: 50px;
+}
+.main_slide img{
+	object-fit: cover;
+}
+
+
+
 
 /*************************/
 /*     Media Queries     */
@@ -1928,7 +1939,7 @@ select {
 	/* Header */
 	.header {
 		overflow: hidden;
-		padding-top: 18.25rem;
+		padding-top: 7rem;
 		padding-bottom: 11.5rem;
 	}
 
