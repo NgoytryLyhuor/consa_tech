@@ -1,6 +1,5 @@
     <!-- Footer -->
     <div class="footer bg-gray">
-        <img class="decoration-city" src="images/decoration-city.svg" alt="alternative">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -40,7 +39,7 @@
                     <center>
                         <div class="row">
                             <div class="col-lg-12">
-                                <ul class="list-unstyled li-space-lg p-small">
+                                <ul class="list-unstyled li-space-lg p-small" style="color: #f99b21;">
                                     <li>© Consa-Tech Since 2023</li>
                                 </ul>
                             </div> <!-- end of col -->

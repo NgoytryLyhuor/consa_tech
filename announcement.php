@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
-                    <h1 style="color: #f8981d;">Announcements</h1>
+                    <h1 style="color: #174C46;">Announcements</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->

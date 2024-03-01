@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
-                    <h1 style="color: #f8981d;">About Us</h1>
+                    <h1 style="color: #f8981d;">About <span style="color: #174c46;">Consa Tech</span></h1>
                 </div>
             </div>
         </div>
@@ -42,8 +42,6 @@
                             <h3 style="color: #174c46;">OUR <span style="color: #f8981d;">MISSION</span></h3>
                             <p>'.$row['mission'].'</p>
                         </div>
-                        <h2 class="mt-5 mb-3 text-uppercase" style="color: #174c46;">OUR <span style="color: #f8981d;">goal</span> </h2> <hr size="5px">
-                        <ul class="list-unstyled li-space-lg mb-5">'.$row['goal'].'</ul>
                     </div>
                 ';
             ?>

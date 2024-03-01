@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-xl-6">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 500px;height: 500px;">
+                    <div id="carouselExampleControls w-100" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner w-100 h-100">
                             <div class="carousel-item active">
                                 <img src="./images/2_1.jpg" class="d-block w-100" alt="...">
@@ -53,7 +53,7 @@
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-lg-6 col-xl-6">
-                    <div class="text-container" style="color: #174c46;">
+                    <div class="" style="color: #174c46;">
                         <h2 style="color: #174c46;"><span style="color: #f8981d;">Elevate  </span><br>your team</h2>
                         <p>This service aims to support SME through:</p>
                         <ul class="list-unstyled li-space-lg" style="margin-top: -15px;">
@@ -66,7 +66,7 @@
                                 <div class="flex-grow-1">Assist SME by giving advices and recruiting technical/engineer staff that meet their current needs in daily production challenges.</div>
                             </li>
                         </ul>
-                        <p>Our technical staffing solution: divide into 3 packages details as below table: </p>
+                        <b>Our technical staffing solution: divide into 3 packages details as below table: </b>
                     
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->

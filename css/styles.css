@@ -205,9 +205,9 @@ a:hover {
 .btn-solid-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 1px solid #f99b21;
+	border: 1px solid #174C46;
 	border-radius: 30px;
-	background-color: #f99b21;
+	background-color: #174C46;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -218,7 +218,7 @@ a:hover {
 
 .btn-solid-sm:hover {
 	background-color: transparent;
-	color: #f99b21; /* needs to stay here because of the color property of a tag */
+	color: #174C46; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
@@ -484,13 +484,13 @@ select {
 }
 
 .navbar .btn-solid-sm {
-	border-color: #f99b21;
-	background-color: #f99b21;
+	border-color: #174C46;
+	background-color: #174C46;
 }
 
 .navbar .btn-solid-sm:hover {
 	background-color: transparent;
-	color: #f99b21;
+	color: #174C46;
 }
 
 
@@ -498,7 +498,7 @@ select {
 /*     Header     */
 /******************/
 .header {
-	padding-top: 8rem;
+	padding-top: 6rem;
 	padding-bottom: 5rem;
 	text-align: center;
 }
@@ -767,7 +767,6 @@ select {
 /*     Projects     */
 /********************/
 .filter {
-	padding-top: 9.25rem;
 	padding-bottom: 5.625rem;
 	text-align: center;
 }
@@ -1035,6 +1034,7 @@ select {
 	padding-top: 8.75rem;
 	padding-bottom: 7.5rem;
 	text-align: center;
+	background-color: #174C46 !important;
 }
 
 .footer .decoration-city {
@@ -1448,7 +1448,7 @@ select {
 	font-weight: 700;
 }
 .footer-details a{
-	color: #174C46;
+	color: #fff;
 }
 .contact_text{
 	text-align: start;
@@ -1498,7 +1498,7 @@ select {
 }
 
 .main_slide{
-	height: 500px;
+	width: 100%;
 	overflow: hidden;
 	padding-bottom: 50px;
 }
@@ -1506,6 +1506,9 @@ select {
 	object-fit: cover;
 }
 
+.tick{
+	color: #174C46 !important;
+}
 
 
 
@@ -1521,6 +1524,19 @@ select {
 		font-size: 14px;
 		font-weight: 800;
 	}
+
+	.left_index {
+        order: 2;
+		padding-bottom: 50px;
+    }
+
+    .center_index {
+        order: 1;
+    }
+
+    .right_index {
+        order: 3;
+    }
 
 	/* service_3_table */
 	.service_table th,.service_table td{
@@ -1940,7 +1956,7 @@ select {
 	.header {
 		overflow: hidden;
 		padding-top: 7rem;
-		padding-bottom: 11.5rem;
+		padding-bottom: 6.5rem;
 	}
 
 	.header .image-container {

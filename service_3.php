@@ -24,29 +24,28 @@
     <div id="details" class="basic-1">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-xl-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/service_3.jpg" alt="alternative">
-                    </div> <!-- end of image-container -->
+            <div class="col-lg-6 col-xl-6">
+                    <div id="carouselExampleControls" class="carousel slide w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner w-100 h-100">
+                            <div class="carousel-item active">
+                                <img src="./images/3_1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div> <!-- end of col -->
                 <div class="col-lg-6 col-xl-6">
-                    <div class="text-container" style="color: #174c46;">
+                    <div style="color: #174c46;">
                         <h2 style="color: #174c46;"><span style="color: #f8981d;">Captivate  </span><br>your audience</h2>
-                        <p>Our design experts create visually stunning and sustainable packaging and labels that resonate with your brand and comply with industry standards.</p>
-                        <p>After working with us, our clients are now able to:</p>
-                        <ul class="list-unstyled li-space-lg mb-5" style="margin-top: -15px;">
-                            <li class="d-flex">
-                                <i class="p-1 fa-solid fa-angles-right" style="color: #f8981d;"></i>
-                                <div class="flex-grow-1"><strong>&nbsp;Visual, functional, and sustainable designs.</strong></div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="p-1 fa-solid fa-angles-right" style="color: #f8981d;"></i>
-                                <div class="flex-grow-1"><strong>&nbsp;Brand-centric customization.</strong></div>
-                            </li><li class="d-flex">
-                                <i class="p-1 fa-solid fa-angles-right" style="color: #f8981d;"></i>
-                                <div class="flex-grow-1"><strong>&nbsp;Regulatory compliance focus.</strong></div>
-                            </li>
-                        </ul>
+                        <p>Attractiveness of product’s label and packaging design is as important as product’s quality in the prospect of market penetration. CONSA TECH believes we are the first local company that applying food and chemical science into label and packaging design. Beside designing professionally, our team provides comment to correct wrong product details information, add other key information, and suggest to present information in the better to way to make the product stand out of the rest in the market.</p>
+                        <b>Currently we have 3 designing package for your consideration:</b>
                     
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
