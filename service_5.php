@@ -26,7 +26,7 @@ include("./header.php");
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-xl-6">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 100%">
+                <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel" style="width: 100%">
                     <div class="carousel-inner w-100 h-100">
                         <div class="carousel-item active">
                             <img src="./images/5_1.jpg" class="d-block w-100" alt="...">

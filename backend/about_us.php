@@ -49,12 +49,6 @@ include("left_side_bar.php");
                                         <span class="d-none d-sm-block"><span style="color:#f99b21"><i class="fa-solid fa-m"></i></span> Mission</span>    
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#settings" role="tab" aria-selected="true">
-                                        <span style="color:#f99b21" class="d-block d-sm-none"><i class="fa-solid fa-g"></i></span>
-                                        <span class="d-none d-sm-block"><span style="color:#f99b21"><i class="fa-solid fa-g"></i></span> Our Goal</span>    
-                                    </a>
-                                </li>
                             </ul>
 
                             <?php
@@ -85,12 +79,7 @@ include("left_side_bar.php");
                                                 <textarea name="mission" id="elm3">'.$row['mission'].'</textarea>
                                             </div>
                                         </div>
-                                        <div class="tab-pane" id="settings" role="tabpanel">
-                                            <label for="description" class="col-sm-12 col-form-label"></label>
-                                            <div class="col-sm-12">
-                                                <textarea name="goal" id="elm4">'.$row['goal'].'</textarea>
-                                            </div>
-                                        </div>
+                                        
                                     </div>  
                                 ';
                             ?>

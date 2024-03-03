@@ -51,7 +51,7 @@
                     </li>
                 <!-- home -->
 
-                <!-- home -->
+                <!-- about_page -->
                     <li class="menu-title">About Us Page</li>
                         <li>
                             <a class=" waves-effect" href="./about_us.php">
@@ -59,7 +59,26 @@
                                 <span>About Us</span>
                             </a>
                         </li>
-                <!-- home -->
+                <!-- about_page -->
+
+                <!-- services -->
+                    <li class="menu-title">Service Page</li>
+                    <li>
+                        <a href="javascript: void(0);" class="waves-effect">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Services</span>
+                            <span style="float: right;"><i style="font-size: 12px;" class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="./service_product_research.php">Products Research & Development</a></li>
+                            <li><a href="./tbl_news_insert1.php">Technical Staffing Solution Service</a></li>
+                            <li><a href="./tbl_news_insert2.php">Packaging & Label Design Consulting</a></li>
+                            <li><a href="./tbl_news_insert3.php">Production Planing & Consulting</a></li>
+                            <li><a href="./tbl_news_insert4.php">Equipment Selection & Raw Materials Consulting</a></li>
+
+                        </ul>
+                    </li>
+                <!-- services -->
 
                 <li class="menu-title">Pages</li>
                 <li>

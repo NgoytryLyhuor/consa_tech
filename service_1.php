@@ -14,7 +14,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
-                    <h1 style="color: #f8981d;">Products Research <span style="color: #174c46;">And</span> Development</h1>
+                    <?php
+                        $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
+                        $sql_select = "SELECT * FROM tbl_service WHERE id = 1";
+                        $result = $con->query($sql_select);
+                        $row = mysqli_fetch_assoc($result);
+                        echo '
+                            <h1 style="color: #174c46;">'.$row['title'].'</h1>
+                        ';
+
+                    ?>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -28,17 +37,29 @@
                 <div class="col-lg-6 col-xl-6">
                     <div class="image-container">
                         
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./images/1_1.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/1_2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/1_3.jpg" class="d-block w-100" alt="...">
-                                </div>
+                        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner img_border_radius">
+                                <?php
+
+                                    $array = explode("+",$row['json_data']);
+                                    $temp = array_slice($array, 2);
+                                    $temp_active = $array[1];
+
+                                    echo '
+                                        <div class="carousel-item active">
+                                            <img src="./backend/assets/images/service/'.$temp_active.'" class="d-block w-100" alt="...">
+                                        </div>
+                                    ';
+
+                                    for($i=0 ; $i<count($temp) ; $i++){
+                                        echo '
+                                            <div class="carousel-item">
+                                                <img src="./backend/assets/images/service/'.$temp[$i].'" class="d-block w-100" alt="...">
+                                            </div>
+                                        ';
+                                    }
+                                
+                                ?>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,30 +71,15 @@
                             </button>
                         </div>
                         
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6 col-xl-6">
-                    <div style="color: #174c46;">
-                        <h2 style="color: #174c46;"><span style="color: #f8981d;">Innovate </span><br>with confidence</h2>
-                        <p>
-                            Research and development (R&D) is our core service. We are proud as local business aim to support R&D and technology transfer with Local SME and industry, and at the same time increase their awareness about importance of investment in R&D service.
-                        </p>
-                        <p>Our R&D is mainly divided into 2 parts: </p>
-                        <ul class="list-unstyled li-space-lg mb-5" style="margin-top: -15px;">
-                            <li class="d-flex">
-                                <i class="p-1 fa-solid fa-angles-right" style="color: #f8981d;"></i>
-                                <div class="flex-grow-1"><strong>Product research:</strong>CONSA TECH consist of a small group of food and chemical engineers with big ambition to support various scale of food and cosmetic SME. We listened the SME’s problems/challenging/request from SME then collect information for assessment and analysis to conclude how we could help SME to create a new affordable product that can boost the SME’s sale demand. From our previous R&D achievement, we developed several products to introduce to customer such as: Blended essential oil, Body lotion, Body scrub, Dried pepper powder, Hair shampoo ect.</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="p-1 fa-solid fa-angles-right" style="color: #f8981d;"></i>
-                                <div class="flex-grow-1"><strong>Product development service:</strong>From days to days, Cambodian market becomes more competitive that in turn push the local SME to take more consideration to innovate their existing product for example: extend food shelf life, Improve odor of essential oil, improve quality of laundry detergent, transform normal Pick lime into another form product like Pickle lime powder to meet market need.,etc.</div>
-                            </li>
-                        </ul>
-                    
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6" style="color: #174C46 !important;">
+                    <?php
+                        echo $row['description']
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
 
 

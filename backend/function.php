@@ -16,6 +16,11 @@
 <?php
 $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
 
+function print_arrays($apple) {
+    print_r($apple);
+    die();
+}
+
 function login(){
     global $con;
     session_start();
@@ -269,9 +274,8 @@ function about_us(){
         $who = trim($_POST['who']);
         $vision = trim($_POST['vision']);
         $mission = trim($_POST['mission']);
-        $goal = trim($_POST['goal']);
         
-        $sql_update = "UPDATE tbl_about_us SET who='$who',vision='$vision',mission='$mission',goal='$goal' WHERE id = 1";
+        $sql_update = "UPDATE tbl_about_us SET who='$who',vision='$vision',mission='$mission' WHERE id = 1";
         $result = $con->query($sql_update);
         if ($result == TRUE) {
             echo '
@@ -288,6 +292,98 @@ function about_us(){
         }
     }
 }about_us();
+
+// service-------------------------------------------
+
+// service_one
+function service_one(){
+    global $con;
+    if (isset($_POST['btn_service_one'])) {
+
+        $array = '';
+        $title = trim($_POST['title']);
+        $description = trim($_POST['description']);
+
+        if ($_FILES['image']['size'][0] > 0) {
+
+            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+                $image = 'image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
+                $array .= '+'.$image;
+                $path_upload = "./assets/images/service/" . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
+            }
+        }
+        else{
+            $array = $_POST['old_image'];
+        }
+
+        $sql_update = "UPDATE tbl_service SET title='$title',description='$description',json_data='$array' WHERE id = 1";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+            ';
+        }
+
+        
+
+    }
+}service_one();
+
+// delete_image
+function delete_image(){
+    global $con;
+    if (isset($_POST['btn_delete_image'])) {
+
+        $array = '';
+        $title = trim($_POST['title']);
+        $description = trim($_POST['description']);
+
+        if ($_FILES['image']['size'][0] > 0) {
+
+            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+                $image = 'image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
+                $array .= '+'.$image;
+                $path_upload = "./assets/images/service/" . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
+            }
+        }
+        else{
+            $array = $_POST['old_image'];
+        }
+
+        $sql_update = "UPDATE tbl_service SET title='$title',description='$description',json_data='$array' WHERE id = 1";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+            ';
+        }
+
+    }
+}service_one();
+
+
+
+
+
+
 
 
 
