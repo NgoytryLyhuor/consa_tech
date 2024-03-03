@@ -75,7 +75,7 @@ include("header.php");
                                                                         <img class="rounded me-2 showImage1" style="border-radius:0px !important" alt="200x200" width="100%" src="./assets/images/service/'.$temp[$i].'" data-holder-rendered="true">
                                                                     </div>
                                                                     <div class="col-md-12">
-                                                                        <button type="submit" class="btn btn-danger w-100" style="border-radius:0px !important">Remove</button>
+                                                                        <button type="button" class="btn btn-danger w-100" style="border-radius:0px !important">Remove</button>
                                                                     </div>
                                                                 </div>
                                                             </div>

@@ -338,47 +338,6 @@ function service_one(){
     }
 }service_one();
 
-// delete_image
-function delete_image(){
-    global $con;
-    if (isset($_POST['btn_delete_image'])) {
-
-        $array = '';
-        $title = trim($_POST['title']);
-        $description = trim($_POST['description']);
-
-        if ($_FILES['image']['size'][0] > 0) {
-
-            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
-                $image = 'image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
-                $array .= '+'.$image;
-                $path_upload = "./assets/images/service/" . $image;
-                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
-            }
-        }
-        else{
-            $array = $_POST['old_image'];
-        }
-
-        $sql_update = "UPDATE tbl_service SET title='$title',description='$description',json_data='$array' WHERE id = 1";
-        $result = $con->query($sql_update);
-        if ($result == TRUE) {
-            echo '
-                <script>
-                    Swal.fire({
-                        position: "center",
-                        icon: "success",
-                        title: "Update Successful",
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                </script>
-            ';
-        }
-
-    }
-}service_one();
-
 
 
 
