@@ -1,7 +1,7 @@
 <div class="container">
 
     <a class="navbar-brand logo-image d-flex align-items-center text-decoration-none" href="index.php">
-        <h4 class="m-0 p-0 text-uppercase" style="color: #174c46;"><img style="height: 40px;" src="./images/logo.jpg" alt=""></h4>
+        <h4 class="m-0 p-0 text-uppercase" style="color: #174c46;"><img src="./images/logo.jpg" alt=""></h4>
     </a>
 
     <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">

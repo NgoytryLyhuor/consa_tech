@@ -16,12 +16,29 @@ include("./header.php");
     <div class="container">
         <div class="row">
 
+        <div class="col-lg-12 col-xl-12">
+                <div class="row">
+                    <div class="col-lg-12 center_index">
+                        <div class="text-container">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">ភាសាខ្មែរ</div> &nbsp;&nbsp;&nbsp;
+                                <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">English</div>
+                            </div>
+                            <h1 class="h1-large text-center" style="color: #174c46;">ONE-STOP SERVICE</h1>
+                            <p class="p-large text-center">High responsibility - Quality - ReliabilityHonest - Low price</p>
+                            <!-- <center>
+                                <a class="btn-solid-lg" href="./contact.php">Contact Us</a>
+                            </center> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-lg-12 col-xl-12 main_slide">
                 <div id="carouselExampleIndicators" class="carousel slide sub_slide h-100 w-100" data-bs-ride="carousel" style="border-radius: 10px;overflow: hidden;">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner h-100 w-100">
                         <div class="carousel-item active w-100 h-100">
@@ -29,9 +46,6 @@ include("./header.php");
                         </div>
                         <div class="carousel-item w-100 h-100">
                             <img src="./images/test4.jpeg" class="d-block w-100 h-100" alt="...">
-                        </div>
-                        <div class="carousel-item w-100 h-100">
-                            <img src="./images/test5.jpeg" class="d-block w-100 h-100" alt="...">
                         </div>
 
                     </div>
@@ -46,41 +60,10 @@ include("./header.php");
                 </div>
             </div>
 
-            <div class="col-lg-12 col-xl-12">
-                <div class="row">
-                    <div class="col-lg-3 left_index">
-                        <img src="./images/left.png" class="w-100" alt="">
-                    </div>
-                    <div class="col-lg-6 center_index">
-                        <div class="text-container">
-                            <div class="row d-flex align-items-center justify-content-center">
-                                <div class="section-title col-3 d-flex align-items-center justify-content-center" style="cursor: pointer;">ភាសាខ្មែរ</div> &nbsp;&nbsp;&nbsp;
-                                <div class="section-title col-3 d-flex align-items-center justify-content-center" style="cursor: pointer;">English</div>
-                            </div>
-                            <?php
-                            $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
-                            $sql_select1 = "SELECT * FROM tbl_home_title WHERE id = 1";
-                            $result1 = $con->query($sql_select1);
-                            $row1 = mysqli_fetch_assoc($result1);
-                            echo '
-                            <h1 class="h1-large text-center" style="color: #174c46;">' . $row1['title'] . '</h1>
-                            <p class="p-large text-center">' . $row1['description'] . '</p>
-                            <center>
-                                <a href="./contact.php">
-                                    <img height="185px" src="./images/contact_us.jpg" alt="">
-                                </a>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 right_index">
-                        <img src="./images/right.png" class="w-100" alt="">
-                    </div>
-                </div>
-            </div>
-            ';
-                            ?>
-                        </div>
-                    </div>
+            
+            
+        </div>
+    </div>
 </header>
 
 
@@ -96,15 +79,14 @@ include("./header.php");
             <div class="col-lg-12">
                 <div class="grid">
                     <?php
+                    $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
                     $sql_select = "SELECT * FROM tbl_news WHERE status = 1";
                     $result = $con->query($sql_select);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '    
                                     <div class="element-item development">
-                                        <a href="">
-                                            <img class="img-fluid" src="./backend/assets/images/news_banner/' . $row['banner'] . '" alt="alternative">
-                                            <p><strong style="font-size: 22px;color: #174c46;">' . $row['title'] . '</strong> <br> ' . $row['description'] . '</p>
-                                        </a>
+                                        <img class="img-fluid" src="./backend/assets/images/news_banner/' . $row['banner'] . '" alt="alternative">
+                                        <p><strong style="font-size: 22px;color: #174c46;">' . $row['title'] . '</strong> <br> ' . $row['description'] . '</p>
                                     </div>
                                 ';
                     }
