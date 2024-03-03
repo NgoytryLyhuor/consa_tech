@@ -16,26 +16,8 @@ include("./header.php");
     <div class="container">
         <div class="row">
 
-        <div class="col-lg-12 col-xl-12">
-                <div class="row">
-                    <div class="col-lg-12 center_index">
-                        <div class="text-container">
-                            <div class="row d-flex align-items-center justify-content-center">
-                                <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">ភាសាខ្មែរ</div> &nbsp;&nbsp;&nbsp;
-                                <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">English</div>
-                            </div>
-                            <h1 class="h1-large text-center" style="color: #174c46;">ONE-STOP SERVICE</h1>
-                            <p class="p-large text-center">High responsibility - Quality - ReliabilityHonest - Low price</p>
-                            <!-- <center>
-                                <a class="btn-solid-lg" href="./contact.php">Contact Us</a>
-                            </center> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-lg-12 col-xl-12 main_slide">
-                <div id="carouselExampleIndicators" class="carousel slide sub_slide h-100 w-100" data-bs-ride="carousel" style="border-radius: 10px;overflow: hidden;">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade sub_slide h-100 w-100" data-bs-ride="carousel" style="border-radius: 10px;overflow: hidden;">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -60,8 +42,35 @@ include("./header.php");
                 </div>
             </div>
 
-            
-            
+            <div class="col-lg-12 col-xl-12">
+                <div class="row">
+                    <div class="col-lg-12 center_index">
+                        <div class="text-container">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">ភាសាខ្មែរ</div> &nbsp;&nbsp;&nbsp;
+                                <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">English</div>
+                            </div>
+                            <h1 class="h1-large text-center" style="color: #174c46;">ONE-STOP SERVICE</h1>
+                            <p class="p-large text-center">High responsibility - Quality - ReliabilityHonest - Low price</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn-solid-lg" href="./contact.php">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-xl-12">
+                <div class="row">
+                    <div class="col-lg-6 center_index mb-3">
+                        <img src="./images/left.png" class="w-100 img_border_radius" alt="" style="border: 1px solid #174C46;">
+                    </div>
+                    <div class="col-lg-6 center_index mb-3">
+                        <img src="./images/right.png" class="w-100 img_border_radius" alt="" style="border: 1px solid #174C46;">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </header>
