@@ -1,5 +1,7 @@
 <?php
     include("./header.php");
+    include('./backend/connection.php')
+
 ?>
     
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light extra-page" aria-label="Main navigation">
@@ -15,7 +17,6 @@
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
                     <?php
-                        $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
                         $sql_select = "SELECT * FROM tbl_service WHERE id = 1";
                         $result = $con->query($sql_select);
                         $row = mysqli_fetch_assoc($result);

@@ -1,9 +1,9 @@
+<?php include('connection.php') ?>
 <div class="vertical-menu">
     <div data-simplebar class="h-100">
         <!-- User details -->
         <div class="user-profile text-center mt-3">
         <?php
-            $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
             $sql_select = "SELECT * FROM tbl_admin WHERE id = 1";
             $result = $con->query($sql_select);
             $row = mysqli_fetch_assoc($result);

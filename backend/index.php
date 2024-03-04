@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech'); 
+    include('connection.php');
     session_start();
     $id = $_SESSION['id'];
     if(!$_SESSION['id']){

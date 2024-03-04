@@ -55,7 +55,6 @@
                     <div class="p-3">
                         <form class="form-horizontal mt-3" action="" method="post">
                             <?php
-                                $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
                                 $sql_select = "SELECT * FROM tbl_admin WHERE id = 1";
                                 $result = $con->query($sql_select);
                                 $row = mysqli_fetch_assoc($result);

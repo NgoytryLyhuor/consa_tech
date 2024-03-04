@@ -1,5 +1,7 @@
 <?php
 include("./header.php");
+include('./backend/connection.php')
+
 ?>
 
 <!-- Navigation -->
@@ -88,7 +90,6 @@ include("./header.php");
             <div class="col-lg-12">
                 <div class="grid">
                     <?php
-                    $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
                     $sql_select = "SELECT * FROM tbl_news WHERE status = 1";
                     $result = $con->query($sql_select);
                     while ($row = mysqli_fetch_assoc($result)) {

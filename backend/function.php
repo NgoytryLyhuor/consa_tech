@@ -1,3 +1,4 @@
+<?php include("connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,6 @@
 </html>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
-$con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
 
 function print_arrays($apple) {
     print_r($apple);

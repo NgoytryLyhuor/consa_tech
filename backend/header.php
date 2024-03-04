@@ -84,7 +84,6 @@
                             <div class="dropdown d-inline-block user-dropdown">
                                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <?php
-                                    $con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
                                     $sql_select = "SELECT * FROM tbl_admin WHERE id = 1";
                                     $result = $con->query($sql_select);
                                     $row = mysqli_fetch_assoc($result);

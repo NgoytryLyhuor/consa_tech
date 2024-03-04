@@ -1,6 +1,5 @@
 <?php
 include("function.php");
-$con = mysqli_connect('localhost', 'u243022743_root', '0965013885Lyhuor', 'u243022743_consa_tech');
 $id = $_SESSION['id'];
 include("header.php");
 ?>
