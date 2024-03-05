@@ -31,11 +31,15 @@ include("header.php");
                                             $sql_select = "SELECT * FROM tbl_service WHERE id = 1";
                                             $result = $con->query($sql_select);
                                             $row = mysqli_fetch_assoc($result);
+                                            $apple = explode("+",$row['json_data']);
 
-                                            $array = explode("+",$row['json_data']);
-                                            $temp = array_slice($array, 1);
-
-                                            // print_r($temp);
+                                            $array = array();
+                                        
+                                            foreach ($apple as $key => $value) {
+                                                if (!empty($value)) {
+                                                    $array[$key] = str_replace("z_image", "+z_image", $value);
+                                                }
+                                            }
 
                                             echo '
                                                 <div class="container">
@@ -65,23 +69,27 @@ include("header.php");
                                                         <label for="image" class="col-sm-12 col-form-label"></label>
                                                         <div class="col-sm-12">
                                                             <div class="row">
+                                                                <input type="hidden" name="delete_img" id="remove_image" class="form-control">
                                                     ';
 
-                                                    for($i=0 ; $i<count($temp) ; $i++){
-                                                        echo'
-                                                            <div class="col-lg-2">
-                                                                <div class="row">
-                                                                    <div class="col-md-12">
-                                                                        <img class="rounded me-2 showImage1" style="border-radius:0px !important" alt="200x200" width="100%" src="./assets/images/service/'.$temp[$i].'" data-holder-rendered="true">
-                                                                    </div>
-                                                                    <div class="col-md-12">
-                                                                        <button type="button" class="btn btn-danger w-100" style="border-radius:0px !important">Remove</button>
+                                                    if (count($array) > 0) {
+                                                        foreach ($array as $value) {
+                                                            echo '
+                                                                <div class="col-lg-2 mb-2" id="' . $value . '">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <img class="rounded me-2 showImage1" style="border-radius: 0px !important" alt="200x200" width="100%" src="./assets/images/service/' . $value . '" data-holder-rendered="true">
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <button type="button" onclick="delete_image(\'' . $value . '\')" class="btn btn-danger w-100" style="border-radius: 0px !important">Remove</button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        ';
+                                                            ';
+                                                        }
                                                     }
-
+                                                    
+                                                    
                                                 echo '
                                                             </div>
                                                         </div>
@@ -94,9 +102,7 @@ include("header.php");
                                                     </div>
                                                 </div>
                                             ';
-
                                         ?>
-
                                     </form>
 
                                 </div>
@@ -122,3 +128,16 @@ include("header.php");
     </body>
 
 </html>
+
+<script>
+    function delete_image(value) {
+        var temp = value;
+
+        document.getElementById('remove_image').value = document.getElementById('remove_image').value + '+' + temp;
+
+        document.getElementById(value).style.display='none';
+        document.getElementById('btn'+value).style.display='none';
+
+
+    }
+</script>

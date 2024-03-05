@@ -42,20 +42,33 @@
                             <div class="carousel-inner img_border_radius">
                                 <?php
 
-                                    $array = explode("+",$row['json_data']);
-                                    $temp = array_slice($array, 2);
-                                    $temp_active = $array[1];
+                                    $sql_select = "SELECT * FROM tbl_service WHERE id = 1";
+                                    $result = $con->query($sql_select);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $apple = explode("+",$row['json_data']);
+
+                                    $array = array();
+
+                                    foreach ($apple as $key => $value) {
+                                        if (!empty($value)) {
+                                            $array[$key] = str_replace("z_image", "+z_image", $value);
+                                        }
+                                    }
+
+                                    $firstElement = reset($array);
+
+                                    $temp_all_img = array_slice($array, 1, null, true);
 
                                     echo '
                                         <div class="carousel-item active">
-                                            <img src="./backend/assets/images/service/'.$temp_active.'" class="d-block w-100" alt="...">
+                                            <img src="./backend/assets/images/service/'.$firstElement.'" class="d-block w-100" alt="...">
                                         </div>
                                     ';
 
-                                    for($i=0 ; $i<count($temp) ; $i++){
+                                    foreach ($temp_all_img as $value) {
                                         echo '
                                             <div class="carousel-item">
-                                                <img src="./backend/assets/images/service/'.$temp[$i].'" class="d-block w-100" alt="...">
+                                                <img src="./backend/assets/images/service/'.$value.'" class="d-block w-100" alt="...">
                                             </div>
                                         ';
                                     }
