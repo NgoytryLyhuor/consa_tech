@@ -373,6 +373,310 @@ function service_one(){
     }
 }service_one();
 
+// service_two
+function service_two(){
+    global $con;
+    if (isset($_POST['btn_service_two'])) {
+
+        $array = '';
+        $title = trim($_POST['title']);
+        $description = trim($_POST['description']);
+        $image_delete = $_POST['delete_img'];
+
+        $img_data = "SELECT json_data FROM tbl_service WHERE id = 2";
+        $sql_select = $con->query($img_data);
+        $row = mysqli_fetch_assoc($sql_select);
+        $string = $row['json_data'];
+        $apple = '';
+
+        if($image_delete != ''){
+            $temp_delete_img = explode('+',$image_delete);
+            $temp_img = explode('+',$row['json_data']);
+
+            for($i=0 ; $i<=count($temp_img) ; $i++){
+                for($j=0 ; $j<=count($temp_delete_img) ; $j++){
+                    if (isset($temp_img[$i]) && isset($temp_delete_img[$j]) && $temp_img[$i] == $temp_delete_img[$j]){
+                        $apple .= $temp_img[$i];
+                    }
+                }
+            }
+        }
+
+        $substringsToRemove = str_replace("z_image", "+z_image", $apple);
+
+        $substringsArray = explode('+', trim($substringsToRemove, '+'));
+        $patterns = array_map('preg_quote', $substringsArray);
+        $pattern = '/(' . implode('|', $patterns) . ')/';
+        $result_apple = preg_replace($pattern, '', $string);
+
+        $sql_update = "UPDATE tbl_service SET json_data='$result_apple' WHERE id = 2";
+        $result = $con->query($sql_update);
+
+        if ($_FILES['image']['size'][0] > 0) {
+
+            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+                $image = '+z_image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
+                $array .= '+'.$image;
+                $path_upload = "./assets/images/service/" . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
+            }
+
+            $img = $array . $row['json_data'];
+            $sql_update = "UPDATE tbl_service SET json_data='$img' WHERE id = 2";
+            $result = $con->query($sql_update);
+        }
+
+        // print_arrays(123);
+
+        $sql_update = "UPDATE tbl_service SET title='$title',description='$description' WHERE id = 2";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+            ';
+        }
+
+        
+
+    }
+}service_two();
+
+// service_three
+function service_three(){
+    global $con;
+    if (isset($_POST['btn_service_three'])) {
+
+        $array = '';
+        $title = trim($_POST['title']);
+        $description = trim($_POST['description']);
+        $image_delete = $_POST['delete_img'];
+
+        $img_data = "SELECT json_data FROM tbl_service WHERE id = 3";
+        $sql_select = $con->query($img_data);
+        $row = mysqli_fetch_assoc($sql_select);
+        $string = $row['json_data'];
+        $apple = '';
+
+        if($image_delete != ''){
+            $temp_delete_img = explode('+',$image_delete);
+            $temp_img = explode('+',$row['json_data']);
+
+            for($i=0 ; $i<=count($temp_img) ; $i++){
+                for($j=0 ; $j<=count($temp_delete_img) ; $j++){
+                    if (isset($temp_img[$i]) && isset($temp_delete_img[$j]) && $temp_img[$i] == $temp_delete_img[$j]){
+                        $apple .= $temp_img[$i];
+                    }
+                }
+            }
+        }
+
+        $substringsToRemove = str_replace("z_image", "+z_image", $apple);
+
+        $substringsArray = explode('+', trim($substringsToRemove, '+'));
+        $patterns = array_map('preg_quote', $substringsArray);
+        $pattern = '/(' . implode('|', $patterns) . ')/';
+        $result_apple = preg_replace($pattern, '', $string);
+
+        $sql_update = "UPDATE tbl_service SET json_data='$result_apple' WHERE id = 3";
+        $result = $con->query($sql_update);
+
+        if ($_FILES['image']['size'][0] > 0) {
+
+            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+                $image = '+z_image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
+                $array .= '+'.$image;
+                $path_upload = "./assets/images/service/" . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
+            }
+
+            $img = $array . $row['json_data'];
+            $sql_update = "UPDATE tbl_service SET json_data='$img' WHERE id = 3";
+            $result = $con->query($sql_update);
+        }
+
+        // print_arrays(123);
+
+        $sql_update = "UPDATE tbl_service SET title='$title',description='$description' WHERE id = 3";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+            ';
+        }
+
+        
+
+    }
+}service_three();
+
+// service_four
+function service_four(){
+    global $con;
+    if (isset($_POST['btn_service_four'])) {
+
+        $array = '';
+        $title = trim($_POST['title']);
+        $description = trim($_POST['description']);
+        $image_delete = $_POST['delete_img'];
+
+        $img_data = "SELECT json_data FROM tbl_service WHERE id = 4";
+        $sql_select = $con->query($img_data);
+        $row = mysqli_fetch_assoc($sql_select);
+        $string = $row['json_data'];
+        $apple = '';
+
+        if($image_delete != ''){
+            $temp_delete_img = explode('+',$image_delete);
+            $temp_img = explode('+',$row['json_data']);
+
+            for($i=0 ; $i<=count($temp_img) ; $i++){
+                for($j=0 ; $j<=count($temp_delete_img) ; $j++){
+                    if (isset($temp_img[$i]) && isset($temp_delete_img[$j]) && $temp_img[$i] == $temp_delete_img[$j]){
+                        $apple .= $temp_img[$i];
+                    }
+                }
+            }
+        }
+
+        $substringsToRemove = str_replace("z_image", "+z_image", $apple);
+
+        $substringsArray = explode('+', trim($substringsToRemove, '+'));
+        $patterns = array_map('preg_quote', $substringsArray);
+        $pattern = '/(' . implode('|', $patterns) . ')/';
+        $result_apple = preg_replace($pattern, '', $string);
+
+        $sql_update = "UPDATE tbl_service SET json_data='$result_apple' WHERE id = 4";
+        $result = $con->query($sql_update);
+
+        if ($_FILES['image']['size'][0] > 0) {
+
+            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+                $image = '+z_image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
+                $array .= '+'.$image;
+                $path_upload = "./assets/images/service/" . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
+            }
+
+            $img = $array . $row['json_data'];
+            $sql_update = "UPDATE tbl_service SET json_data='$img' WHERE id = 4";
+            $result = $con->query($sql_update);
+        }
+
+        // print_arrays(123);
+
+        $sql_update = "UPDATE tbl_service SET title='$title',description='$description' WHERE id = 4";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+            ';
+        }
+
+        
+
+    }
+}service_four();
+
+// service_five
+function service_five(){
+    global $con;
+    if (isset($_POST['btn_service_five'])) {
+
+        $array = '';
+        $title = trim($_POST['title']);
+        $description = trim($_POST['description']);
+        $image_delete = $_POST['delete_img'];
+
+        $img_data = "SELECT json_data FROM tbl_service WHERE id = 5";
+        $sql_select = $con->query($img_data);
+        $row = mysqli_fetch_assoc($sql_select);
+        $string = $row['json_data'];
+        $apple = '';
+
+        if($image_delete != ''){
+            $temp_delete_img = explode('+',$image_delete);
+            $temp_img = explode('+',$row['json_data']);
+
+            for($i=0 ; $i<=count($temp_img) ; $i++){
+                for($j=0 ; $j<=count($temp_delete_img) ; $j++){
+                    if (isset($temp_img[$i]) && isset($temp_delete_img[$j]) && $temp_img[$i] == $temp_delete_img[$j]){
+                        $apple .= $temp_img[$i];
+                    }
+                }
+            }
+        }
+
+        $substringsToRemove = str_replace("z_image", "+z_image", $apple);
+
+        $substringsArray = explode('+', trim($substringsToRemove, '+'));
+        $patterns = array_map('preg_quote', $substringsArray);
+        $pattern = '/(' . implode('|', $patterns) . ')/';
+        $result_apple = preg_replace($pattern, '', $string);
+
+        $sql_update = "UPDATE tbl_service SET json_data='$result_apple' WHERE id = 5";
+        $result = $con->query($sql_update);
+
+        if ($_FILES['image']['size'][0] > 0) {
+
+            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+                $image = '+z_image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
+                $array .= '+'.$image;
+                $path_upload = "./assets/images/service/" . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
+            }
+
+            $img = $array . $row['json_data'];
+            $sql_update = "UPDATE tbl_service SET json_data='$img' WHERE id = 5";
+            $result = $con->query($sql_update);
+        }
+
+        // print_arrays(123);
+
+        $sql_update = "UPDATE tbl_service SET title='$title',description='$description' WHERE id = 5";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+            ';
+        }
+
+        
+
+    }
+}service_five();
+
 
 
 

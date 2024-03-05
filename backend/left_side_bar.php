@@ -71,10 +71,10 @@
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
                             <li><a href="./service_product_research.php">Products Research & Development</a></li>
-                            <li><a href="./tbl_news_insert1.php">Technical Staffing Solution Service</a></li>
-                            <li><a href="./tbl_news_insert2.php">Packaging & Label Design Consulting</a></li>
-                            <li><a href="./tbl_news_insert3.php">Production Planing & Consulting</a></li>
-                            <li><a href="./tbl_news_insert4.php">Equipment Selection & Raw Materials Consulting</a></li>
+                            <li><a href="./service_technical_staffing_solution.php">Technical Staffing Solution Service</a></li>
+                            <li><a href="./service_packaging_&_label_design_consulting.php">Packaging & Label Design Consulting</a></li>
+                            <li><a href="./service_production_planing_&_consulting.php">Production Planing & Consulting</a></li>
+                            <li><a href="./service_equipment_selection_&_raw_materials_consulting.php">Equipment Selection & Raw Materials Consulting</a></li>
 
                         </ul>
                     </li>
