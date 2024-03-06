@@ -48,10 +48,10 @@ include('./backend/connection.php')
                 <div class="row">
                     <div class="col-lg-12 center_index">
                         <div class="text-container">
-                            <div class="row d-flex align-items-center justify-content-center">
+                            <!-- <div class="row d-flex align-items-center justify-content-center">
                                 <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">ភាសាខ្មែរ</div> &nbsp;&nbsp;&nbsp;
                                 <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">English</div>
-                            </div>
+                            </div> -->
                             <h1 class="h1-large text-center" style="color: #174c46;">ONE-STOP SERVICE</h1>
                             <p class="p-large text-center">High responsibility - Quality - ReliabilityHonest - Low price</p>
                             <div class="d-flex align-items-center justify-content-center">

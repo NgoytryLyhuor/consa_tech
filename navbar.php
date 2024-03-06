@@ -41,7 +41,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'announcement.php') echo 'active'; ?>" href="./announcement.php">Announcements</a>
+                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'under_construction.php') echo 'active'; ?>" href="./under_construction.php">Announcements</a>
             </li>
         </ul>
         <span class="nav-item">

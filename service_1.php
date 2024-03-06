@@ -39,7 +39,7 @@
                     <div class="image-container">
                         
                         <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-inner img_border_radius">
+                            <div class="carousel-inner">
                                 <?php
 
                                     $sql_select = "SELECT * FROM tbl_service WHERE id = 1";
