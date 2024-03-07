@@ -5,8 +5,11 @@ function route()
     // Get the requested URI
     $uri = $_SERVER['REQUEST_URI'];
 
-    // Get the base path dynamically
-    $basePath = str_replace("/index.php", "", $_SERVER["SCRIPT_NAME"]);
+    // Get the script path
+    $scriptPath = $_SERVER["SCRIPT_NAME"];
+
+    // Determine the base path dynamically
+    $basePath = rtrim(dirname($scriptPath), '/');
 
     // Remove the base path from the URI
     $uri = str_replace($basePath, '', $uri);
@@ -24,8 +27,8 @@ function route()
             include 'about_us.php';
             break;
 
-        case '/contact':
-            echo 'Contact Us';
+        case '/services':
+            include 'services.php';
             break;
 
         default:
