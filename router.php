@@ -11,6 +11,9 @@ function route()
     // Remove the base path from the URI
     $uri = str_replace($basePath, '', $uri);
 
+    // Add a trailing slash if needed
+    $uri = '/' . ltrim($uri, '/');
+
     // Define your routes
     switch ($uri) {
         case '/':
