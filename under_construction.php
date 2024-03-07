@@ -29,7 +29,7 @@
             <div class="row">
                 <center>
                     <h1 style="color: #f99b21;">Coming Soon</h1><br><br>
-                    <a class="btn-solid-sm" href="./index.php">Back Home</a>
+                    <a class="btn-solid-lg" href="./index.php">Back Home</a>
                 </center>
             </div>
         </div>

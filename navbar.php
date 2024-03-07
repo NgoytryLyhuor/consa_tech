@@ -1,6 +1,6 @@
 <div class="container">
 
-    <a class="navbar-brand logo-image d-flex align-items-center text-decoration-none" href="index.php">
+    <a class="navbar-brand logo-image d-flex align-items-center text-decoration-none" href="/consa_tech/">
         <h4 class="m-0 p-0 text-uppercase" style="color: #174c46;"><img src="./images/logo.jpg" alt=""></h4>
     </a>
 
@@ -11,10 +11,11 @@
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ms-auto navbar-nav-scroll">
             <li class="nav-item">
-                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') echo 'active'; ?>" aria-current="page" href="./index.php">Home</a>
+                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == '/consa_tech/') echo 'active'; ?>" aria-current="page" href="/consa_tech/">Home</a>
             </li>
             <li class="nav-item">
-                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'about_us.php') echo 'active'; ?>" href="./about_us.php">About Us</a>
+            <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == '/consa_tech/about') echo 'active'; ?>" href="/consa_tech/about">About Us</a>
+
             </li>
             <li class="nav-item dropdown">
                 <a style="color: #174c46;" class="nav-link dropdown-toggle 
