@@ -31,6 +31,15 @@ include("header.php");
                                                     $sql_select = "SELECT * FROM tbl_home_title WHERE id = 1";
                                                     $result = $con->query($sql_select);
                                                     $row = mysqli_fetch_assoc($result);
+
+                                                    $apple = explode("+",$row['json_data']);
+                                                    $array = array();
+                                                    foreach ($apple as $key => $value) {
+                                                        if (!empty($value)) {
+                                                            $array[$key] = str_replace("z_image", "+z_image", $value);
+                                                        }
+                                                    }
+                                                    
                                                     echo '
                                                         <div class="row mb-3">
                                                             <label for="title" class="col-sm-12 col-form-label">Title</label>
@@ -47,46 +56,39 @@ include("header.php");
                                                         </div>
 
                                                         <div class="row mb-3">
-                                                            <label for="image" class="col-sm-12 col-form-label">Banner</label>
+                                                            <label for="image" class="col-sm-12 col-form-label">Slide</label>
                                                             <div class="col-sm-12">
-                                                                <input class="form-control image1" type="file" id="image" name="new_banner">
+                                                                <input type="hidden" name="old_image" class="form-control" value="'.$row['json_data'].'">
+                                                                <input class="form-control image1" type="file" id="image" multiple name="image[]">
                                                             </div>
                                                         </div>
-
                                                         <div class="row mb-3">
                                                             <label for="image" class="col-sm-12 col-form-label"></label>
-                                                            <div class="col-sm-12">
-                                                                <input class="form-control" type="hidden" value="'.$row['banner'].'" name="old_banner">
-                                                                <img class="rounded me-2 showImage1" alt="200x200" height="200" src="./assets/images/home/'.$row['banner'].'"data-holder-rendered="true">
-                                                            </div>
-                                                        </div>
+                                                            <input type="hidden" name="delete_img" id="remove_image" class="form-control">
+
                                                         ';
+
+                                                        if (count($array) > 0) {
+                                                            foreach ($array as $value) {
+                                                                echo '
+                                                                    <div class="col-lg-2 mb-2" id="' . $value . '">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <img class="rounded me-2 showImage1" style="border-radius: 0px !important" alt="200x200" width="100%" src="./assets/images/home/' . $value . '" data-holder-rendered="true">
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <button type="button" onclick="delete_image(\'' . $value . '\')" class="btn btn-danger w-100" style="border-radius: 0px !important">Remove</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                ';
+                                                            }
+                                                        }
                                                     ?>
                                                 <div class="row mb-3">
                                                     <label for="image" class="col-sm-12 col-form-label"></label>
                                                     <div class="col-sm-12">
-                                                        <button type="button" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-info waves-effect waves-light">Update Data</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- The Modal -->
-                                            <div class="modal" id="myModal">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-
-                                                        <!-- Modal Header -->
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title">Are you sure ?</h4>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                        </div>
-
-                                                        <!-- Modal footer -->
-                                                        <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                                <button type="submit" name="btn_home_title" class="btn btn-info waves-effect waves-light">Update</button>
-                                                        </div>
-
+                                                        <button type="submit" name="btn_home_title" class="btn btn-info waves-effect waves-light">Update Data</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -116,16 +118,16 @@ include("header.php");
 
 </html>
 
+
 <script>
+    function delete_image(value) {
+        var temp = value;
 
-    $(document).ready(function(){
-        $(".image1").change(function(e){
-            var reader = new FileReader();
-            reader.onload = function(e){
-                $(".showImage1").attr('src',e.target.result);
-            }
-            reader.readAsDataURL(e.target.files['0']);
-        });
-    });
+        document.getElementById('remove_image').value = document.getElementById('remove_image').value + '+' + temp;
 
+        document.getElementById(value).style.display='none';
+        document.getElementById('btn'+value).style.display='none';
+
+
+    }
 </script>

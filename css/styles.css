@@ -626,10 +626,6 @@ select {
 	margin-bottom: 1.875rem;
 }
 
-.basic-1 h2 span {
-	font-weight: 400;
-}
-
 .basic-1 p:last-of-type {
 	margin-bottom: 2rem;
 }

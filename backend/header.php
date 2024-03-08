@@ -37,6 +37,9 @@
         *{
             font-family: Roboto,Hanuman;
         }
+        .main_service ol, ul {
+            padding-left: 20px !important;
+        }
     </style>
     <body data-topbar="dark">
     

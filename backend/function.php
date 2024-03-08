@@ -235,18 +235,56 @@ function home_title(){
     global $con;
     if (isset($_POST['btn_home_title'])) {
 
+        $image_delete = $_POST['delete_img'];
+        $array = '';
+
+        $img_data = "SELECT json_data FROM tbl_home_title WHERE id = 1";
+        $sql_select = $con->query($img_data);
+        $row = mysqli_fetch_assoc($sql_select);
+        $string = $row['json_data'];
+        $apple = '';
+
+        if($image_delete != ''){
+            $temp_delete_img = explode('+',$image_delete);
+            $temp_img = explode('+',$row['json_data']);
+
+            for($i=0 ; $i<=count($temp_img) ; $i++){
+                for($j=0 ; $j<=count($temp_delete_img) ; $j++){
+                    if (isset($temp_img[$i]) && isset($temp_delete_img[$j]) && $temp_img[$i] == $temp_delete_img[$j]){
+                        $apple .= $temp_img[$i];
+                    }
+                }
+            }
+        }
+
+        $substringsToRemove = str_replace("z_image", "+z_image", $apple);
+
+        $substringsArray = explode('+', trim($substringsToRemove, '+'));
+        $patterns = array_map('preg_quote', $substringsArray);
+        $pattern = '/(' . implode('|', $patterns) . ')/';
+        $result_apple = preg_replace($pattern, '', $string);
+
+        $sql_update = "UPDATE tbl_home_title SET json_data='$result_apple' WHERE id = 1";
+        $result = $con->query($sql_update);
+
+        if ($_FILES['image']['size'][0] > 0) {
+
+            for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+                $image = '+z_image_service_1_'.rand(1, 999999) . '-' . $_FILES['image']['name'][$i];
+                $array .= '+'.$image;
+                $path_upload = "./assets/images/home/" . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'][$i], $path_upload);
+            }
+
+            $img = $array . $row['json_data'];
+            $sql_update = "UPDATE tbl_home_title SET json_data='$img' WHERE id = 1";
+            $result = $con->query($sql_update);
+        }
+
         $title = trim($_POST['title']);
         $description = trim($_POST['description']);
-
-        if ($_FILES['new_banner']['size'] > 0) {
-            $banner = rand(1, 999999) . '-' . $_FILES['new_banner']['name'];
-            $parth_upload = "./assets/images/home/" . $banner;
-            move_uploaded_file($_FILES['new_banner']['tmp_name'], $parth_upload);
-        } else {
-            $banner = $_POST['old_banner'];
-        }
         
-        $sql_update = "UPDATE tbl_home_title SET title='$title',description='$description',banner='$banner' WHERE id = 1";
+        $sql_update = "UPDATE tbl_home_title SET title='$title',description='$description' WHERE id = 1";
         $result = $con->query($sql_update);
         if ($result == TRUE) {
             echo '

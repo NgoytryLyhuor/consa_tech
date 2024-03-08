@@ -19,30 +19,53 @@ include('./backend/connection.php')
         <div class="row">
 
             <div class="col-lg-12 col-xl-12 main_slide">
-                <div id="carouselExampleIndicators" class="carousel slide carousel-fade sub_slide h-100 w-100" data-bs-ride="carousel" style="border-radius: 10px;overflow: hidden;">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner h-100 w-100">
-                        <div class="carousel-item active w-100 h-100">
-                            <img src="./images/1_5.png" class="d-block w-100 h-100" alt="...">
-                        </div>
-                        <div class="carousel-item w-100 h-100">
-                            <img src="./images/test4.jpeg" class="d-block w-100 h-100" alt="...">
-                        </div>
+                <div id="carouselExampleControls" class="carousel slide carousel-fade sub_slide h-100 w-100" data-bs-ride="carousel" style="border-radius: 10px;overflow: hidden;">
+                    <div class="carousel-inner">
+                        <?php
 
+                        $sql_select = "SELECT * FROM tbl_home_title WHERE id = 1";
+                        $result = $con->query($sql_select);
+                        $row = mysqli_fetch_assoc($result);
+                        $apple = explode("+",$row['json_data']);
+
+                        $array = array();
+
+                        foreach ($apple as $key => $value) {
+                            if (!empty($value)) {
+                                $array[$key] = str_replace("z_image", "+z_image", $value);
+                            }
+                        }
+
+                        $firstElement = reset($array);
+
+                        $temp_all_img = array_slice($array, 1, null, true);
+
+                        echo '
+                            <div class="carousel-item active">
+                                <img src="./backend/assets/images/home/'.$firstElement.'" class="d-block w-100" alt="...">
+                            </div>
+                        ';
+
+                        foreach ($temp_all_img as $value) {
+                            echo '
+                                <div class="carousel-item">
+                                    <img src="./backend/assets/images/home/'.$value.'" class="d-block w-100" alt="...">
+                                </div>
+                            ';
+                        }
+                            
+                        ?>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
-            </div>
 
             <div class="col-lg-12 col-xl-12">
                 <div class="row">
@@ -52,11 +75,20 @@ include('./backend/connection.php')
                                 <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">ភាសាខ្មែរ</div> &nbsp;&nbsp;&nbsp;
                                 <div class="section-title col-2 d-flex align-items-center justify-content-center" style="cursor: pointer;">English</div>
                             </div> -->
-                            <h1 class="h1-large text-center" style="color: #174c46;">ONE-STOP SERVICE</h1>
-                            <p class="p-large text-center">High responsibility - Quality - ReliabilityHonest - Low price</p>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a class="btn-solid-lg" href="./contact.php">Contact Us</a>
-                            </div>
+                            <?php 
+
+                                $sql_select = "SELECT * FROM tbl_home_title WHERE id = 1";
+                                $result = $con->query($sql_select);
+                                $row = mysqli_fetch_assoc($result);
+
+                                echo'
+                                    <h1 class="h1-large text-center" style="color: #174c46;">'.$row['title'].'</h1>
+                                    <p class="p-large text-center">'.$row['description'].'</p>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a class="btn-solid-lg" href="./contact.php">Contact Us</a>
+                                    </div>
+                                ';
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -94,11 +126,11 @@ include('./backend/connection.php')
                     $result = $con->query($sql_select);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '    
-                                    <div class="element-item development">
-                                        <img class="img-fluid" src="./backend/assets/images/news_banner/' . $row['banner'] . '" alt="alternative">
-                                        <p><strong style="font-size: 22px;color: #174c46;">' . $row['title'] . '</strong> <br> ' . $row['description'] . '</p>
-                                    </div>
-                                ';
+                            <div class="element-item development">
+                                <img class="img-fluid" src="./backend/assets/images/news_banner/' . $row['banner'] . '" alt="alternative">
+                                <p><strong style="font-size: 22px;color: #174c46;">' . $row['title'] . '</strong> <br> ' . $row['description'] . '</p>
+                            </div>
+                        ';
                     }
                     ?>
                 </div>
