@@ -41,7 +41,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="fa-solid fa-newspaper"></i>
-                            <span>News</span>
+                            <span>Activities</span>
                             <span style="float: right;"><i style="font-size: 12px;" class="fa-solid fa-chevron-down"></i></span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
@@ -64,9 +64,15 @@
                 <!-- services -->
                     <li class="menu-title">Service Page</li>
                     <li>
+                        <a class=" waves-effect" href="./main_service.php">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Service</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="fa-solid fa-book"></i>
-                            <span>Services</span>
+                            <span>All Services</span>
                             <span style="float: right;"><i style="font-size: 12px;" class="fa-solid fa-chevron-down"></i></span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">

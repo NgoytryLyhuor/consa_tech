@@ -680,6 +680,55 @@ function service_five(){
 }service_five();
 
 
+// main_service
+
+function main_service(){
+    global $con;
+    if (isset($_POST['btn_main_service'])) {
+
+        $title_1 = trim($_POST['title_1']);
+        $title_2 = trim($_POST['title_2']);
+        $title_3 = trim($_POST['title_3']);
+        $title_4 = trim($_POST['title_4']);
+        $title_5 = trim($_POST['title_5']);
+
+        $description_1 = trim($_POST['description_1']);
+        $description_2 = trim($_POST['description_2']);
+        $description_3 = trim($_POST['description_3']);
+        $description_4 = trim($_POST['description_4']);
+        $description_5 = trim($_POST['description_5']);
+        
+        $sql_update = "UPDATE tbl_main_service SET title='$title_1',description='$description_1' WHERE id = 1";
+        $result = $con->query($sql_update);
+
+        $sql_update = "UPDATE tbl_main_service SET title='$title_2',description='$description_2' WHERE id = 2";
+        $result = $con->query($sql_update);
+
+        $sql_update = "UPDATE tbl_main_service SET title='$title_3',description='$description_3' WHERE id = 3";
+        $result = $con->query($sql_update);
+
+        $sql_update = "UPDATE tbl_main_service SET title='$title_4',description='$description_4' WHERE id = 4";
+        $result = $con->query($sql_update);
+
+        $sql_update = "UPDATE tbl_main_service SET title='$title_5',description='$description_5' WHERE id = 5";
+        $result = $con->query($sql_update);
+        
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 2500
+                    });
+                </script>
+            ';
+        }
+    }
+}main_service();
+
 
 
 
