@@ -1,5 +1,7 @@
 <?php
     include("./header.php");
+    include('./backend/connection.php')
+
 ?>
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light extra-page" aria-label="Main navigation">
         <?php
@@ -25,23 +27,43 @@
             <div class="row">
                 <div class="col-lg-6 col-xl-6">
                     <div class="image-container">
+                        
                         <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./images/2_1.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/2_2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/2_3.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/2_4.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/2_5.jpg" class="d-block w-100" alt="...">
-                                </div>
+                                <?php
+
+                                    $sql_select = "SELECT * FROM tbl_service WHERE id = 2";
+                                    $result = $con->query($sql_select);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $apple = explode("+",$row['json_data']);
+
+                                    $array = array();
+
+                                    foreach ($apple as $key => $value) {
+                                        if (!empty($value)) {
+                                            $array[$key] = str_replace("z_image", "+z_image", $value);
+                                        }
+                                    }
+
+                                    $firstElement = reset($array);
+
+                                    $temp_all_img = array_slice($array, 1, null, true);
+
+                                    echo '
+                                        <div class="carousel-item active">
+                                            <img src="./backend/assets/images/service/'.$firstElement.'" class="d-block w-100" alt="...">
+                                        </div>
+                                    ';
+
+                                    foreach ($temp_all_img as $value) {
+                                        echo '
+                                            <div class="carousel-item">
+                                                <img src="./backend/assets/images/service/'.$value.'" class="d-block w-100" alt="...">
+                                            </div>
+                                        ';
+                                    }
+                                
+                                ?>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -52,27 +74,15 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
+                        
                     </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6 col-xl-6">
-                    <div class="" style="color: #174c46;">
-                        <h2 style="color: #174c46;"><span style="color: #f8981d;">Elevate  </span><br>your team</h2>
-                        <p>This service aims to support SME through:</p>
-                        <ul class="list-unstyled li-space-lg" style="margin-top: -15px;">
-                            <li class="d-flex">
-                                <i class="p-1 fa-solid fa-angles-right" style="color: #f8981d;"></i>
-                                <div class="flex-grow-1">Improve knowledge and competency of SME’s existing human resource through various technical training and coaching, for example: Food safety, Quality control, Production and stock management, other topics and so on.</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="p-1 fa-solid fa-angles-right" style="color: #f8981d;"></i>
-                                <div class="flex-grow-1">Assist SME by giving advices and recruiting technical/engineer staff that meet their current needs in daily production challenges.</div>
-                            </li>
-                        </ul>
-                        <b>Our technical staffing solution: divide into 3 packages details as below table: </b>
-                    
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+                </div>
+                <div class="col-lg-6 col-xl-6" style="color: #174C46 !important;">
+                    <?php
+                        echo $row['description']
+                    ?>
+                </div>
+            </div>
         </div> <!-- end of container -->
     </div>
 

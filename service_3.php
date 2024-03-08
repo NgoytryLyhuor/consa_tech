@@ -1,5 +1,7 @@
 <?php
     include("./header.php");
+    include('./backend/connection.php')
+
 ?>
     
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light extra-page" aria-label="Main navigation">
@@ -26,34 +28,62 @@
             <div class="row">
                 <div class="col-lg-6 col-xl-6">
                     <div class="image-container">
-
+                        
                         <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./images/3_1.jpg" class="d-block w-100" alt="...">
-                                </div>
+                                <?php
+
+                                    $sql_select = "SELECT * FROM tbl_service WHERE id = 3";
+                                    $result = $con->query($sql_select);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $apple = explode("+",$row['json_data']);
+
+                                    $array = array();
+
+                                    foreach ($apple as $key => $value) {
+                                        if (!empty($value)) {
+                                            $array[$key] = str_replace("z_image", "+z_image", $value);
+                                        }
+                                    }
+
+                                    $firstElement = reset($array);
+
+                                    $temp_all_img = array_slice($array, 1, null, true);
+
+                                    echo '
+                                        <div class="carousel-item active">
+                                            <img src="./backend/assets/images/service/'.$firstElement.'" class="d-block w-100" alt="...">
+                                        </div>
+                                    ';
+
+                                    foreach ($temp_all_img as $value) {
+                                        echo '
+                                            <div class="carousel-item">
+                                                <img src="./backend/assets/images/service/'.$value.'" class="d-block w-100" alt="...">
+                                            </div>
+                                        ';
+                                    }
+                                
+                                ?>
                             </div>
-                            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
-                            </button> -->
+                            </button>
                         </div>
+                        
                     </div>
-
-                </div> <!-- end of col -->
-                <div class="col-lg-6 col-xl-6">
-                    <div style="color: #174c46;">
-                        <h2 style="color: #174c46;"><span style="color: #f8981d;">Captivate  </span><br>your audience</h2>
-                        <p>Attractiveness of product’s label and packaging design is as important as product’s quality in the prospect of market penetration. CONSA TECH believes we are the first local company that applying food and chemical science into label and packaging design. Beside designing professionally, our team provides comment to correct wrong product details information, add other key information, and suggest to present information in the better to way to make the product stand out of the rest in the market.</p>
-                        <b>Currently we have 3 designing package for your consideration:</b>
-                    
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+                </div>
+                <div class="col-lg-6 col-xl-6" style="color: #174C46 !important;">
+                    <?php
+                        echo $row['description']
+                    ?>
+                </div>
+            </div>
         </div> <!-- end of container -->
     </div>
 
