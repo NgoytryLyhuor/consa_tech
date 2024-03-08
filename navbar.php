@@ -37,11 +37,21 @@ global $basePath; // Make $basePath accessible in this file
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_1.php') echo 'active'; ?>" href="./service_1.php">Products Research & Development</a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_2.php') echo 'active'; ?>" href="./service_2.php">Technical Staffing Solution</a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_3.php') echo 'active'; ?>" href="./service_3.php">Packaging & Label Design Consulting</a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_4.php') echo 'active'; ?>" href="./service_4.php">Production Planing & Consulting</a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_5.php') echo 'active'; ?>" href="./service_5.php">Equipment Selection & Raw Materials Consulting</a></li>
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_1.php') echo 'active'; ?>" href="./service_1.php">
+                        Products research and Development
+                    </a></li>
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_2.php') echo 'active'; ?>" href="./service_2.php">
+                        Technical Staffing Solution and Training
+                    </a></li>
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_3.php') echo 'active'; ?>" href="./service_3.php">
+                        Packaging and Labelling Design consulting
+                    </a></li>
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_4.php') echo 'active'; ?>" href="./service_4.php">
+                        Production Planning and Stock management consulting
+                    </a></li>
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_5.php') echo 'active'; ?>" href="./service_5.php">
+                        Production Equipment Selection & Raw Materials Consulting
+                    </a></li>
                 </ul>
             </li>
             <li class="nav-item">

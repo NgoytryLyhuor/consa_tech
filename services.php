@@ -10,6 +10,9 @@
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light extra-page" aria-label="Main navigation">
         <?php
             include("./navbar.php");
+            $sql_select_color = "SELECT * FROM tbl_color WHERE id = 1";
+            $result_color = $con->query($sql_select_color);
+            $row_color = mysqli_fetch_assoc($result_color);
         ?>
     </nav>
 
@@ -19,7 +22,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
-                    <h1 style="color: #f8981d;">Our services</h1>
+                    <?php
+                        echo '<h1 style="color: '.$row_color['color'].' !important;">Our services</h1>';
+                    ?>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -45,7 +50,7 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_1.php" class="text-decoration-none">
-                                        <h5 class="card-title" style="color: #f99b21;">'.$row['title'].'</h5>
+                                        <h5 class="card-title" style="color: '.$row_color['color'].' !important;">'.$row['title'].'</h5>
                                     </a>
                                     <div class="main_service" style="color: #174c46 !important;">
                                         '.$row['description'].'
@@ -73,7 +78,7 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_2.php" class="text-decoration-none">
-                                        <h5 class="card-title" style="color: #f99b21;">'.$row['title'].'</h5>
+                                        <h5 class="card-title" style="color: '.$row_color['color'].' !important;">'.$row['title'].'</h5>
                                     </a>
                                     <div class="main_service" style="color: #174c46 !important;">
                                         '.$row['description'].'
@@ -101,7 +106,7 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_3.php" class="text-decoration-none">
-                                        <h5 class="card-title" style="color: #f99b21;">'.$row['title'].'</h5>
+                                        <h5 class="card-title" style="color: '.$row_color['color'].' !important;">'.$row['title'].'</h5>
                                     </a>
                                     <div class="main_service" style="color: #174c46 !important;">
                                         '.$row['description'].'
@@ -129,7 +134,7 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_4.php" class="text-decoration-none">
-                                        <h5 class="card-title" style="color: #f99b21;">'.$row['title'].'</h5>
+                                        <h5 class="card-title" style="color: '.$row_color['color'].' !important;">'.$row['title'].'</h5>
                                     </a>
                                     <div class="main_service" style="color: #174c46 !important;">
                                         '.$row['description'].'
@@ -157,7 +162,7 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_5.php" class="text-decoration-none">
-                                        <h5 class="card-title" style="color: #f99b21;">'.$row['title'].'</h5>
+                                        <h5 class="card-title" style="color: '.$row_color['color'].' !important;">'.$row['title'].'</h5>
                                     </a>
                                     <div class="main_service" style="color: #174c46 !important;">
                                         '.$row['description'].'

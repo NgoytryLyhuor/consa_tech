@@ -6,6 +6,9 @@
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light extra-page" aria-label="Main navigation">
         <?php
             include("./navbar.php");
+            $sql_select_color = "SELECT * FROM tbl_color WHERE id = 1";
+            $result_color = $con->query($sql_select_color);
+            $row_color = mysqli_fetch_assoc($result_color);
         ?>
     </nav>
 
@@ -14,7 +17,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
-                    <h1 style="color: #f8981d;">Technical <span style="color: #174c46;">Staffing</span> Solution</h1>
+                    <?php
+                        $sql_select = "SELECT * FROM tbl_service WHERE id = 2";
+                        $result = $con->query($sql_select);
+                        $row = mysqli_fetch_assoc($result);
+                        echo '
+                            <h1 style="color: '.$row_color['color'].' !important;">'.$row['title'].'</h1>
+                        ';
+
+                    ?>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->

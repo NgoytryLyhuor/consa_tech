@@ -768,7 +768,54 @@ function main_service(){
 }main_service();
 
 
+// title_color
+function title_color(){
+    global $con;
+    if (isset($_POST['btn_title_color'])) {
+        $color = $_POST['color'];
+        $other = $_POST['other'];
 
+        
+        if($color == '' && $other == '#000000'){
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "error",
+                        title: "Please select the color",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+            ';
+            return 0;
+        }
+        elseif($color != 'undefined' && $other == "#000000"){
+            $sql_update = "UPDATE tbl_color SET color='$color' WHERE id = 1";
+            $result = $con->query($sql_update);
+        }
+
+        else{
+            $sql_update = "UPDATE tbl_color SET color='$other' WHERE id = 1";
+            $result = $con->query($sql_update);
+
+        }
+
+        if ($result == TRUE) {
+            echo '
+                <script>
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Update Successful",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                </script>
+            ';
+        }
+    }
+}title_color();
 
 
 

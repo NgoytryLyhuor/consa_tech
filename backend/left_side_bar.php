@@ -39,6 +39,12 @@
                         </a>
                     </li>
                     <li>
+                        <a class=" waves-effect" href="./chnage_all_title_color.php">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>Change All Title Color</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="fa-solid fa-newspaper"></i>
                             <span>Activities</span>

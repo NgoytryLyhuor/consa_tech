@@ -7,6 +7,9 @@
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light extra-page" aria-label="Main navigation">
         <?php
             include("./navbar.php");
+            $sql_select_color = "SELECT * FROM tbl_color WHERE id = 1";
+            $result_color = $con->query($sql_select_color);
+            $row_color = mysqli_fetch_assoc($result_color);
         ?>
     </nav>
 
@@ -16,7 +19,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
-                    <h1 style="color: #174c46;">Announcements</h1>
+                    <?php
+                        echo'<h1 style="color: '.$row_color['color'].' !important;">Announcements</h1>';
+                    ?>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->

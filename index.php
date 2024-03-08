@@ -81,8 +81,12 @@ include('./backend/connection.php')
                                 $result = $con->query($sql_select);
                                 $row = mysqli_fetch_assoc($result);
 
+                                $sql_select_color = "SELECT * FROM tbl_color WHERE id = 1";
+                                $result_color = $con->query($sql_select_color);
+                                $row_color = mysqli_fetch_assoc($result_color);
+
                                 echo'
-                                    <h1 class="h1-large text-center" style="color: #174c46;">'.$row['title'].'</h1>
+                                    <h1 class="h1-large text-center" style="color: '.$row_color['color'].' !important;">'.$row['title'].'</h1>
                                     <p class="p-large text-center">'.$row['description'].'</p>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <a class="btn-solid-lg" href="./contact.php">Contact Us</a>
@@ -115,7 +119,9 @@ include('./backend/connection.php')
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="h2-heading" style="color: #174c46;">Our Activities</h2>
+                <?php
+                    echo ' <h2 class="h2-heading"  style="color: '.$row_color['color'].' !important;">Our Activities</h2>';
+                ?>
             </div>
         </div>
         <div class="row">
