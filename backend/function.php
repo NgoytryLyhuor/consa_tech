@@ -333,6 +333,9 @@ function service_one(){
         $pattern = '/(' . implode('|', $patterns) . ')/';
         $result_apple = preg_replace($pattern, '', $string);
 
+        // print_arrays($result_apple);
+
+
         $sql_update = "UPDATE tbl_service SET json_data='$result_apple' WHERE id = 1";
         $result = $con->query($sql_update);
 
@@ -350,7 +353,6 @@ function service_one(){
             $result = $con->query($sql_update);
         }
 
-        // print_arrays(123);
 
         $sql_update = "UPDATE tbl_service SET title='$title',description='$description' WHERE id = 1";
         $result = $con->query($sql_update);
