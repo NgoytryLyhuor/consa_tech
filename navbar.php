@@ -1,6 +1,6 @@
 <div class="container">
 
-    <a class="navbar-brand logo-image d-flex align-items-center text-decoration-none" href="index.php">
+    <a class="navbar-brand logo-image d-flex align-items-center text-decoration-none" href="<?php echo $basePath; ?>/">
         <h4 class="m-0 p-0 text-uppercase" style="color: #174c46;"><img src="./images/logo.jpg" alt=""></h4>
     </a>
 
@@ -11,10 +11,11 @@
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ms-auto navbar-nav-scroll">
             <li class="nav-item">
-                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') echo 'active'; ?>" aria-current="page" href="./index.php">Home</a>
+                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == '<?php echo $basePath; ?>/') echo 'active'; ?>" aria-current="page" href="<?php echo $basePath; ?>/">Home</a>
             </li>
             <li class="nav-item">
-                <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'about_us.php') echo 'active'; ?>" href="./about_us.php">About Us</a>
+            <a style="color: #174c46;" class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == '<?php echo $basePath; ?>/about') echo 'active'; ?>" href="<?php echo $basePath; ?>/about">About Us</a>
+
             </li>
             <li class="nav-item dropdown">
                 <a style="color: #174c46;" class="nav-link dropdown-toggle 
@@ -29,7 +30,7 @@
                     href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Services
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'services.php') echo 'active'; ?>" href="./services.php">All Services</a></li>
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'services.php') echo 'active'; ?>" href="<?php echo $basePath; ?>/services">All Services</a></li>
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
