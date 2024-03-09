@@ -102,7 +102,7 @@
                         echo '
                             <div class="card">
                                 <div class="card-icon">
-                                    <img src="./images/service_3.jpg" width="110px" alt="">
+                                    <img src="./images/service_3.png" width="110px" alt="">
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_3.php" class="text-decoration-none">

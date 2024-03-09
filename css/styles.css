@@ -429,6 +429,7 @@ select {
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-item .nav-link.active {
 	color: #f99b21 !important;
+	
 }
 
 /* Dropdown Menu */
@@ -464,8 +465,8 @@ select {
 }
 
 .navbar .dropdown-item:hover {
-	background-color: #ffffff;
-	color: #f99b21;
+	background-color: #f99b21 !important;
+	color: #fff !important;
 }
 
 .navbar .dropdown-divider {
@@ -1019,6 +1020,11 @@ select {
 
 .form-1 .list-unstyled .fas {
 	color: #f99b21;
+}
+
+.temp_active{
+	background-color: #f99b21 !important;
+	color: #fff !important;
 }
 
 

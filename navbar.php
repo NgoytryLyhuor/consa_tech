@@ -33,23 +33,23 @@ global $basePath; // Make $basePath accessible in this file
                     href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Services
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'services.php') echo 'active'; ?>" href="./services.php">All Services</a></li>
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'services.php') echo 'temp_active'; ?>" href="./services.php">All Services</a></li>
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_1.php') echo 'active'; ?>" href="./service_1.php">
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_1.php') echo 'temp_active'; ?>" href="./service_1.php">
                         Products research and Development
                     </a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_2.php') echo 'active'; ?>" href="./service_2.php">
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_2.php') echo 'temp_active'; ?>" href="./service_2.php">
                         Technical Staffing Solution and Training
                     </a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_3.php') echo 'active'; ?>" href="./service_3.php">
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_3.php') echo 'temp_active'; ?>" href="./service_3.php">
                         Packaging and Labelling Design consulting
                     </a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_4.php') echo 'active'; ?>" href="./service_4.php">
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_4.php') echo 'temp_active'; ?>" href="./service_4.php">
                         Production Planning and Stock management consulting
                     </a></li>
-                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_5.php') echo 'active'; ?>" href="./service_5.php">
+                    <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'service_5.php') echo 'temp_active'; ?>" href="./service_5.php">
                         Production Equipment Selection & Raw Materials Consulting
                     </a></li>
                 </ul>
@@ -68,6 +68,8 @@ global $basePath; // Make $basePath accessible in this file
 
 <script>
 $(document).ready(function() {
+    var timeout;
+
     // Enable Bootstrap dropdowns on hover (for desktop) and on click (for mobile)
     $('.nav-item.dropdown').on('mouseenter focus', function() {
         var dropdownMenu = $(this).find('.dropdown-menu');
@@ -78,18 +80,26 @@ $(document).ready(function() {
     }).on('mouseleave blur', function() {
         var dropdownMenu = $(this).find('.dropdown-menu');
         if (dropdownMenu.is(':visible')) {
-            $(this).removeClass('show');
-            dropdownMenu.stop(true, true).fadeOut(200);
+            // Use setTimeout to add a delay before hiding the dropdown
+            timeout = setTimeout(function() {
+                $('.nav-item.dropdown').removeClass('show');
+                dropdownMenu.stop(true, true).fadeOut(200);
+            }, 200); // 2000 milliseconds (2 seconds)
         }
     });
 
     // Prevent dropdown menu from closing when hovering over it
     $('.dropdown-menu').on('mouseenter', function() {
+        clearTimeout(timeout); // Clear the timeout to prevent hiding the menu
         $(this).stop(true, true).addClass('show');
         $(this).closest('.nav-item.dropdown').addClass('show');
     }).on('mouseleave', function() {
-        $(this).stop(true, true).removeClass('show');
-        $(this).closest('.nav-item.dropdown').removeClass('show');
+        var dropdownMenu = $(this);
+        timeout = setTimeout(function() {
+            dropdownMenu.stop(true, true).removeClass('show');
+            dropdownMenu.closest('.nav-item.dropdown').removeClass('show');
+        }, 200); // 2000 milliseconds (2 seconds)
     });
 });
+
 </script>
