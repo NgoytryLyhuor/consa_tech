@@ -21,7 +21,7 @@
         <!--- Sidemenu -->
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
-            <ul class="metismenu list-unstyled" id="side-menu">
+            <ul class="metismenu list-unstyled" id="side-menu" style="padding-left:0px !important">
                 <li class="menu-title">Dashboard</li>
                 <li>
                     <a class=" waves-effect" href="./index.php">

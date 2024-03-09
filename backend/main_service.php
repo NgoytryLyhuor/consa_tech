@@ -85,6 +85,21 @@ include("left_side_bar.php");
                                             <div class="col-sm-12">
                                                 <textarea name="description_1" id="elm1">'.$row_1['description'].'</textarea>
                                             </div>
+
+                                            <div class="row mb-3 mt-3">
+                                                <label for="image" class="col-sm-12 col-form-label">Banner</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control image1" type="file" id="image" name="banner_1">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="image" class="col-sm-12 col-form-label"></label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="hidden" value="'.$row_1['banner'].'" name="old_banner_1">
+                                                    <img class="rounded me-2 showImage1" alt="200x200" height="200" src="./assets/images/service_banner/'.$row_1['banner'].'" data-holder-rendered="true">
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                         <div class="tab-pane" id="service_2" role="tabpanel">
@@ -97,6 +112,20 @@ include("left_side_bar.php");
                                             <label for="description" class="col-sm-12 col-form-label">Description</label>
                                             <div class="col-sm-12">
                                                 <textarea name="description_2" id="elm2">'.$row_2['description'].'</textarea>
+                                            </div>
+
+                                            <div class="row mb-3 mt-3">
+                                                <label for="image" class="col-sm-12 col-form-label">Banner</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control image2" type="file" id="image" name="banner_2">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="image" class="col-sm-12 col-form-label"></label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="hidden" value="'.$row_2['banner'].'" name="old_banner_2">
+                                                    <img class="rounded me-2 showImage2" alt="200x200" height="200" src="./assets/images/service_banner/'.$row_2['banner'].'" data-holder-rendered="true">
+                                                </div>
                                             </div>
                                         </div>
 
@@ -111,6 +140,20 @@ include("left_side_bar.php");
                                             <div class="col-sm-12">
                                                 <textarea name="description_3" id="elm3">'.$row_3['description'].'</textarea>
                                             </div>
+
+                                            <div class="row mb-3 mt-3">
+                                                <label for="image" class="col-sm-12 col-form-label">Banner</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control image3" type="file" id="image" name="banner_3">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="image" class="col-sm-12 col-form-label"></label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="hidden" value="'.$row_3['banner'].'" name="old_banner_3">
+                                                    <img class="rounded me-2 showImage3" alt="200x200" height="200" src="./assets/images/service_banner/'.$row_3['banner'].'" data-holder-rendered="true">
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="tab-pane" id="service_4" role="tabpanel">
@@ -124,6 +167,20 @@ include("left_side_bar.php");
                                             <div class="col-sm-12">
                                                 <textarea name="description_4" id="elm4">'.$row_4['description'].'</textarea>
                                             </div>
+
+                                            <div class="row mb-3 mt-3">
+                                                <label for="image" class="col-sm-12 col-form-label">Banner</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control image4" type="file" id="image" name="banner_4">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="image" class="col-sm-12 col-form-label"></label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="hidden" value="'.$row_4['banner'].'" name="old_banner_4">
+                                                    <img class="rounded me-2 showImage4" alt="200x200" height="200" src="./assets/images/service_banner/'.$row_4['banner'].'" data-holder-rendered="true">
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="tab-pane" id="service_5" role="tabpanel">
@@ -136,6 +193,20 @@ include("left_side_bar.php");
                                             <label for="description" class="col-sm-12 col-form-label">Description</label>
                                             <div class="col-sm-12">
                                                 <textarea name="description_5" id="elm5">'.$row_5['description'].'</textarea>
+                                            </div>
+                                            
+                                            <div class="row mb-3 mt-3">
+                                                <label for="image" class="col-sm-12 col-form-label">Banner</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control image5" type="file" id="image" name="banner_5">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="image" class="col-sm-12 col-form-label"></label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="hidden" value="'.$row_5['banner'].'" name="old_banner_5">
+                                                    <img class="rounded me-2 showImage5" alt="200x200" height="200" src="./assets/images/service_banner/'.$row_5['banner'].'" data-holder-rendered="true">
+                                                </div>
                                             </div>
                                         </div>
                                         
@@ -181,6 +252,34 @@ include("right_side_bar.php");
             var reader = new FileReader();
             reader.onload = function(e){
                 $(".showImage1").attr('src',e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
+        $(".image2").change(function(e){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $(".showImage2").attr('src',e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
+        $(".image3").change(function(e){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $(".showImage3").attr('src',e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
+        $(".image4").change(function(e){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $(".showImage4").attr('src',e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
+        $(".image5").change(function(e){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $(".showImage5").attr('src',e.target.result);
             }
             reader.readAsDataURL(e.target.files['0']);
         });

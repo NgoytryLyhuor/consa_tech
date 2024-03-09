@@ -46,7 +46,7 @@
                         echo '
                             <div class="card">
                                 <div class="card-icon">
-                                    <img src="./images/service_1.jpg" width="110px" alt="">
+                                    <img src="./backend/assets/images/service_banner/'.$row['banner'].'" width="110px" alt="">
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_1.php" class="text-decoration-none">
@@ -74,7 +74,7 @@
                         echo '
                             <div class="card">
                                 <div class="card-icon">
-                                    <img src="./images/service_2.jpg" width="110px" alt="">
+                                    <img src="./backend/assets/images/service_banner/'.$row['banner'].'" width="110px" alt="">
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_2.php" class="text-decoration-none">
@@ -102,7 +102,7 @@
                         echo '
                             <div class="card">
                                 <div class="card-icon">
-                                    <img src="./images/service_3.png" width="110px" alt="">
+                                    <img src="./backend/assets/images/service_banner/'.$row['banner'].'" width="110px" alt="">
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_3.php" class="text-decoration-none">
@@ -130,7 +130,7 @@
                         echo '
                             <div class="card">
                                 <div class="card-icon">
-                                    <img src="./images/service_4.png" width="110px" alt="">
+                                    <img src="./backend/assets/images/service_banner/'.$row['banner'].'" width="110px" alt="">
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_4.php" class="text-decoration-none">
@@ -158,7 +158,7 @@
                         echo '
                             <div class="card">
                                 <div class="card-icon">
-                                    <img src="./images/service_5.png" width="110px" alt="">
+                                    <img src="./backend/assets/images/service_banner/'.$row['banner'].'" width="110px" alt="">
                                 </div>
                                 <div class="card-body">
                                     <a href="./service_5.php" class="text-decoration-none">

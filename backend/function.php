@@ -724,6 +724,22 @@ function main_service(){
     global $con;
     if (isset($_POST['btn_main_service'])) {
 
+        for($i=1 ; $i<=5 ; $i++){
+            if ($_FILES['banner_'.$i]['size'] > 0) {
+                $banner = rand(1, 999999) . '-' . $_FILES['banner_'.$i]['name'];
+                $path_upload = "./assets/images/service_banner/" . $banner;
+                move_uploaded_file($_FILES['banner_'.$i]['tmp_name'], $path_upload);
+                unlink("./assets/images/service_banner/" . $_POST['old_banner_'.$i]);
+
+                $sql_update = "UPDATE tbl_main_service SET banner='$banner' WHERE id = $i";
+                $result = $con->query($sql_update);
+            } else {
+                $banner = $_POST['old_banner_'.$i];
+                $sql_update = "UPDATE tbl_main_service SET banner='$banner' WHERE id = $i";
+                $result = $con->query($sql_update);
+            }
+        }
+
         $title_1 = trim($_POST['title_1']);
         $title_2 = trim($_POST['title_2']);
         $title_3 = trim($_POST['title_3']);
