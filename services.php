@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-xl-10 offset-xl-1 text-center">
                     <?php
-                        echo '<h1 style="color: '.$row_color['color'].' !important;">Our services</h1>';
+                        echo '<h1 style="color: '.$row_color['color'].' !important;">Our Services</h1>';
                     ?>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
