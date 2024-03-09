@@ -37,9 +37,9 @@
                 $row = mysqli_fetch_assoc($result);
                 echo '
                     <div class="col-xl-10 offset-xl-1">
-                        <h2 class="mt-5 mb-3 text-uppercase"  style="color: '.$row_color['color'].' !important;">who we are</h2> <hr size="5px">
+                        <h2 class="mt-5 mb-3 text-uppercase"  style="color: #174C46 !important;">who we are</h2> <hr size="5px">
                         <p class="mb-5">'.$row['who'].'</p>
-                        <h2 class="mt-5 mb-3 text-uppercase"  style="color: '.$row_color['color'].' !important;">VISION AND MISSION</h2> <hr size="5px">
+                        <h2 class="mt-5 mb-3 text-uppercase"  style="color: #174C46 !important;">VISION AND MISSION</h2> <hr size="5px">
                         <div class="text-box mb-5">
                             <h3  style="color: '.$row_color['color'].' !important;">OUR VISION</h3>
                             <p>'.$row['vision'].'</p>
