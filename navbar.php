@@ -32,7 +32,16 @@ global $basePath; // Make $basePath accessible in this file
                     ?>" 
                     href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Services
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                <ul class="dropdown-menu
+                    <?php if (
+                        basename($_SERVER['PHP_SELF']) == 'services.php' || 
+                        basename($_SERVER['PHP_SELF']) == 'service_1.php' || 
+                        basename($_SERVER['PHP_SELF']) == 'service_2.php' || 
+                        basename($_SERVER['PHP_SELF']) == 'service_3.php' || 
+                        basename($_SERVER['PHP_SELF']) == 'service_4.php' || 
+                        basename($_SERVER['PHP_SELF']) == 'service_5.php') echo 'show'; 
+                    ?>
+                    " aria-labelledby="dropdown01">
                     <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'services.php') echo 'temp_active'; ?>" href="./services.php">All Services</a></li>
                     <li>
                         <div class="dropdown-divider"></div>
