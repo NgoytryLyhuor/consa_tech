@@ -32,16 +32,7 @@ global $basePath; // Make $basePath accessible in this file
                     ?>" 
                     href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Services
                 </a>
-                <ul class="dropdown-menu
-                    <?php if (
-                        basename($_SERVER['PHP_SELF']) == 'services.php' || 
-                        basename($_SERVER['PHP_SELF']) == 'service_1.php' || 
-                        basename($_SERVER['PHP_SELF']) == 'service_2.php' || 
-                        basename($_SERVER['PHP_SELF']) == 'service_3.php' || 
-                        basename($_SERVER['PHP_SELF']) == 'service_4.php' || 
-                        basename($_SERVER['PHP_SELF']) == 'service_5.php') echo 'show'; 
-                    ?>
-                    " aria-labelledby="dropdown01">
+                <ul class="dropdown-menu" aria-labelledby="dropdown01" id="servicesDropdown">
                     <li><a style="color: #174c46;" class="dropdown-item <?php if (basename($_SERVER['PHP_SELF']) == 'services.php') echo 'temp_active'; ?>" href="./services.php">All Services</a></li>
                     <li>
                         <div class="dropdown-divider"></div>
@@ -76,6 +67,31 @@ global $basePath; // Make $basePath accessible in this file
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
+
+function displayServicesOnSmallScreens() {
+    if (window.innerWidth <= 768) {
+        var currentPage = window.location.pathname.split('/').pop();
+        var servicePages = [
+            'services.php',
+            'service_1.php',
+            'service_2.php',
+            'service_3.php',
+            'service_4.php',
+            'service_5.php'
+        ];
+    }
+    // Check if the current page is one of the service pages
+    if (servicePages.includes(currentPage)) {
+        // Add the 'show' class to the dropdown menu
+        var dropdownMenu = document.getElementById('servicesDropdown');
+        if (dropdownMenu) {
+            dropdownMenu.classList.add('show');
+        }
+    }
+}
+window.addEventListener('load', displayServicesOnSmallScreens);
+
+
 $(document).ready(function() {
     var timeout;
 
@@ -109,6 +125,7 @@ $(document).ready(function() {
             dropdownMenu.closest('.nav-item.dropdown').removeClass('show');
         }, 200); // 2000 milliseconds (2 seconds)
     });
+
 });
 
 </script>
