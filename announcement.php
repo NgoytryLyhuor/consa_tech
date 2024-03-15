@@ -37,13 +37,16 @@
                             </div>
                             <div class="col-md-12 position-relative mt-3">
                                 <h5 class="card-title announce_title">
-                                ប្រើឥតគិ.តថ្លៃ! ​ចង់ធ្វើស្លាយបទបង្ហាញឱ្យ មានភាពច្នៃប្រឌិត ទាក់ទាញ អាចប្រើវេបសាយ៥នេះបាន
+                                Topic: Production Planning and Management for Food Manufacturing
                                 </h5> 
                                 <p class="announce_des">
-                                មិនថាការងារការិយាល័យ ឬការធ្វើកិច្ចការសាលានោះទេ ការធ្វើបទបង្ហាញតាមរយៈស្លាយនៅតែជាតម្រូវការចាំបាច់។ ដូច្នេះសម្រាប់បងប្អូនដែលធ្វើស្លាយហើយចង់ឱ្យមានភាពច្នៃប្រឌិតច្រើន ឬធ្វើឱ្យបទបង្ហាញទាំងនោះកាន់តែមានភាពទាក់ទាញ ។
+                                    - Target Audience:
+                                    - Student and Employee who are seeking for improving their practical knowledge in Food industry
+                                    - Candidate who are preparing for first day job in Food industry
+                                    - E-Certificate of completion will be provided after the training.
                                 </p>
                                 <p class="announce_date">
-                                    FEBRUARY 20 2024
+                                MARCH 15 2024
                                 </p>
                             </div>
                         </div>
@@ -60,10 +63,13 @@
                             </div>
                             <div class="col-md-12 position-relative mt-3">
                                 <h5 class="card-title announce_title">
-                                    អស្ចារ្យណាស់! ជប៉ុនយកស្វាយខ្មែរផលិតធ្វើភេសជ្ជៈ ដាក់លក់លើវេបសាយកំពុងផ្ទុះការគាំទ្រខ្លាំងជប៉ុន
+                                CONSA TECH
                                 </h5> 
                                 <p class="announce_des">
-                                ស្វាយខ្មែរកាន់តែមានភាពល្បីល្បាញក្រោយជប៉ុនបានយកស្វាយខ្មែរច្នៃទៅជាភេសជ្ជៈយកទៅដាក់លក់លើវេបសាយ shop.umenoyado កំពុងផ្ទុះការគាំទ្រយ៉ាងខ្លាំងពីប្រជាជនជប៉ុននិងពីប្រជាជនខ្មែររស់នៅជប៉ុន។
+                                CONSA TECH បានបន្ថែមសេវាកម្មមួយទៀតទាក់ទងទៅនឹង សេវាកម្មពិគ្រោះយោបល់ ជួយសហគ្រាសក្នុងសំរេចចិត្តលើការទិញគ្រឿងផ្សំគីមី និងឧបករណ៍សំខាន់ៗប្រើប្រាស់ក្នុងផលិតកម្មប្រចាំថ្ងៃ។
+                                បន្ថែមលើនេះ យើងខ្ញុំក៏មានសេវាកម្មពិគ្រោះយោបល់លើផែនការផលិតកម្ម ដើម្បីសហគ្រាសអាចបង្កើនលទ្ធភាពផលិតកម្ម និងកាត់បន្ថយកំហាតមិនចាំបាច់ផ្សេងៗ។
+                                CONSA Tech ធានាបាននូវ ទំនុកចិត្ត គុណភាព និងគុណតម្លៃជូនទៅកាន់អតិថិជនទាំងអស់។
+                                ទាក់ទងមកកាន់ពួកយើងឥឡូវនេះ ដើម្បីទទួលបានពត៍មាន និងឱកាស។
                                 </p>
                                 <p class="announce_date">
                                 MARCH 15 2024
@@ -83,10 +89,13 @@
                             </div>
                             <div class="col-md-12 position-relative mt-3">
                                 <h5 class="card-title announce_title">
-                                មិនទាន់មានអ្វីជាដុំកំភួន កុំទិញរបស់ទាំង៥នេះថ្លៃពេក បើអនាគតចង់មានបានដូចគេដូចឯង
+                                Opportunity for 2 slots of Intern/Full time staff" near city of Battambong.
                                 </h5> 
                                 <p class="announce_des">
-                                បើអ្នកមិនទាន់សល់អ្វីជាដុំកំភួនទេនោះ អ្នកគួរផ្ដោតសំខាន់លើការគ្រប់គ្រងលុយដែលខ្លួនរកបានពោលគឺបើផ្ដោតលើការរកចំណូលឲ្យបានច្រើនហើយលុយដែលរកបានប្រើប្រាស់ឲ្យមានប្រសិទ្ធភាព ប្រើឲ្យចំណេញកើតកូនកើតចៅទើបជីវភាពអ្នកកាន់តែធូធាឡើង។
+                                    - Only for Male candidate with availability to work rotately at Night shift when become full time staff. <br>
+                                    - Proficiency in English is required as there will be trainings with international experts this month. <br>
+                                    - The 2 interns will received monthly allowance from the factory. <br>
+                                    **Deadline of Application: March 03rd, 2024
                                 </p>
                                 <p class="announce_date">
                                     FEBRUARY 22 2024
