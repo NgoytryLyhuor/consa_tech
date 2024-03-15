@@ -32,7 +32,7 @@
                         <div class="row announce_box mx-1">
                             <div class="col-md-12">
                                 <div class="container-fluid p-0 overflow-hidden" style="border-radius: 10px;">
-                                    <img width="100%" class="img_border_radius" style="object-fit: cover;" height="200px" src="https://business-cambodia.com/cms/assets/09763949-031d-498e-bd14-562a4e294e76" alt="">
+                                    <img  height="100%" width="100%" class="img_border_radius" height="200px" src="https://scontent.fpnh8-1.fna.fbcdn.net/v/t39.30808-6/431908616_408750155184033_6847078726500936007_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGMFW_kGuvrROzO_COtZ3jKB4ibLuY6cFcHiJsu5jpwVyaafB_LYgpbdexLAY-vTBHtSHG8tkAZJ2CIZYkXWOpV&_nc_ohc=wvw5NSLE75sAX8N404M&_nc_zt=23&_nc_ht=scontent.fpnh8-1.fna&oh=00_AfBV3TJhOi6QD_fwVkjYS0KF04Ooo6LznMK1eG37qr12rA&oe=65F9ECC6" alt="">
                                 </div>
                             </div>
                             <div class="col-md-12 position-relative mt-3">
@@ -55,7 +55,7 @@
                         <div class="row announce_box mx-1">
                             <div class="col-md-12">
                                 <div class="container-fluid p-0 overflow-hidden" style="border-radius: 10px;">
-                                    <img width="100%" class="img_border_radius" style="object-fit: cover;" height="200px" src="https://business-cambodia.com/cms/assets/919b55d5-115b-4cb8-a4d8-ffb11cad29b3" alt="">
+                                    <img height="100%" width="100%" class="img_border_radius" height="200px" src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/431730259_406711882054527_1474181119054161999_n.jpg?stp=dst-jpg_p843x403&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeER9F-z_kYapIReZZRfpduAticbwmTg-aK2JxvCZOD5okWqbjE1XPcXyrCUB9424LMXeJEiNEsQbMmJr2o5_GM2&_nc_ohc=rltNSbrQ5BoAX9afrX6&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfCC5Pv2ZcJGRPtN4Du_YPPWLTDuhTUkl2cfaX5fm9qvNA&oe=65FA02EC" alt="">
                                 </div>
                             </div>
                             <div class="col-md-12 position-relative mt-3">
@@ -78,7 +78,7 @@
                         <div class="row announce_box mx-1">
                             <div class="col-md-12">
                                 <div class="container-fluid p-0 overflow-hidden" style="border-radius: 10px;">
-                                    <img width="100%" class="img_border_radius" style="object-fit: cover;" height="200px" src="https://business-cambodia.com/cms/assets/5cdf7dbb-bb28-49a3-8e9e-cd8c20c7ac57" alt="">
+                                    <img  height="100%" width="100%" class="img_border_radius" height="200px" src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/429977136_400995039292878_6176600559952940993_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGle1r2iAE2l-1y4lSFXSWvSbugmuwMiHxJu6Ca7AyIfLUa7KbPYUr_tRr3lElRZc2JjUc4xdTRAJFnkXE7zXoq&_nc_ohc=c-Pkc8yjyHEAX-WW7bZ&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfBN8imKdGjDVl5pVvPNI6bMyhKD8qQ1td07kfymutcvsg&oe=65F9600C" alt="">
                                 </div>
                             </div>
                             <div class="col-md-12 position-relative mt-3">
