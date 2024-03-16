@@ -842,7 +842,7 @@ function announcement_insert() {
 
     if (isset($_POST['btn_announcement_insert'])) {
         $title = trim($_POST['title']);
-        $description = trim($_POST['description']);
+        $description = $_POST['description'];
         $date = $_POST['date'];
 
         $banner = rand(1, 999999) . '-' . $_FILES['banner']['name'];

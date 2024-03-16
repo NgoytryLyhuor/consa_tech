@@ -80,7 +80,7 @@ include("left_side_bar.php");
                                                     <td align="left" style="width:100px">
                                                         ' . $row['date'] . '
                                                     </td>
-                                                    <td>
+                                                    <td style="width:150px">
                                                         <a class="btn btn-info waves-effect waves-linght" href="./announcement_update.php?id=' . $row['id'] . '">Update</a>
                                                         <button onclick="item_delete(`' . $row['id'] . '`)" class="btn btn_delete btn-danger waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#myModal">Delete</button>
                                                     </td>
