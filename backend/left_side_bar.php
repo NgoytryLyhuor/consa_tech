@@ -51,8 +51,8 @@
                             <span style="float: right;"><i style="font-size: 12px;" class="fa-solid fa-chevron-down"></i></span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="./tbl_news_view.php">View</a></li>
-                            <li><a href="./tbl_news_insert.php">Insert</a></li>
+                            <li><a href="./tbl_news_view.php">All Activities</a></li>
+                            <li><a href="./tbl_news_insert.php">Insert New Activities</a></li>
                         </ul>
                     </li>
                 <!-- home -->
@@ -91,6 +91,21 @@
                         </ul>
                     </li>
                 <!-- services -->
+
+                <!-- announcement -->
+                    <li class="menu-title">Announcement Us Page</li>
+                    <li>
+                        <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fa-solid fa-bullhorn"></i>
+                            <span>Announcements</span>
+                            <span style="float: right;"><i style="font-size: 12px;" class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="./announcement_details.php">All Announcements</a></li>
+                            <li><a href="./announcement_insert.php">Insert New Announcement</a></li>
+                        </ul>
+                    </li>
+                <!-- announcement -->
 
                 <li class="menu-title">Pages</li>
                 <li>

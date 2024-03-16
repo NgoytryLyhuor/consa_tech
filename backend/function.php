@@ -204,7 +204,7 @@ function news_update(){
                 $banner = rand(1, 999999) . '-' . $_FILES['new_banner']['name'];
                 $parth_upload = "./assets/images/news_banner/" . $banner;
                 move_uploaded_file($_FILES['new_banner']['tmp_name'], $parth_upload);
-                unlink("./assets/images/news_banner" . $_POST['old_banner']);
+                unlink("./assets/images/news_banner/" . $_POST['old_banner']);
             } else {
                 $banner = $_POST['old_banner'];
             }
@@ -833,6 +833,70 @@ function title_color(){
     }
 }title_color();
 
+
+// announcement--------------------------------------------------------------------------
+
+// announcement_insert
+function announcement_insert() {
+    global $con;
+
+    if (isset($_POST['btn_announcement_insert'])) {
+        $title = trim($_POST['title']);
+        $description = trim($_POST['description']);
+        $date = $_POST['date'];
+
+        $banner = rand(1, 999999) . '-' . $_FILES['banner']['name'];
+        $path_upload = "./assets/images/announcement/" . $banner;
+        move_uploaded_file($_FILES['banner']['tmp_name'], $path_upload);
+
+        $sql_insert = "INSERT INTO tbl_announcement VALUES(null,'$title','$description','$banner','$date','1')";
+        $result = $con->query($sql_insert);
+
+        if ($result == TRUE) {
+            header("location:announcement_details.php?success=1");
+        }
+    }
+}announcement_insert();
+
+// announcement_update
+function announcement_update(){
+    global $con;
+    if (isset($_POST['btn_announcement_update'])) {
+
+        $id = $_POST['id'];
+        $title = trim($_POST['title']);
+        $date = $_POST['date'];
+        $description = trim($_POST['description']);
+
+            if ($_FILES['new_banner']['size'] > 0) {
+                $banner = rand(1, 999999) . '-' . $_FILES['new_banner']['name'];
+                $parth_upload = "./assets/images/news_banner/" . $banner;
+                move_uploaded_file($_FILES['new_banner']['tmp_name'], $parth_upload);
+                unlink("./assets/images/news_banner/" . $_POST['old_banner']);
+            } else {
+                $banner = $_POST['old_banner'];
+            }
+        
+        $sql_update = "UPDATE tbl_announcement SET title='$title',description='$description',banner='$banner',date='$date' WHERE id = $id";
+        $result = $con->query($sql_update);
+        if ($result == TRUE) {
+            header("location:announcement_details.php?update=1");
+        }
+    }
+}announcement_update();
+
+// announcement_delete
+function announcement_delete(){
+    global $con;
+    if(isset($_POST['btn_announcement_delete'])){
+        $id = $_POST['delete_id'];
+        $sql_update = "UPDATE tbl_announcement SET status = 0 WHERE id = $id";
+        $result = $con->query($sql_update);
+        if($result == TRUE){
+            header("location:announcement_details.php?deleted=1") ;
+        }
+    }
+}announcement_delete();
 
 
 
