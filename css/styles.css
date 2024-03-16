@@ -1511,6 +1511,11 @@ select {
 	color: #174C46 !important;
 }
 
+.announcement_box{
+	margin-left:.25rem!important;
+	margin-right:.25rem!important
+}
+
 
 
 /*************************/
@@ -1524,6 +1529,10 @@ select {
 		margin-left: -2.5%;
 		font-size: 14px;
 		font-weight: 800;
+	}
+
+	.announcement_box{
+		margin: 0px !important;
 	}
 
 	.main_slide{
@@ -1657,7 +1666,7 @@ select {
 	}
 
 	.announce_container{
-		padding: 0;
+		padding: 0 !important;
 	}
 }
 /* end of min-width 768px */
