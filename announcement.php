@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-4">
+                <div class="col-lg-4 announcement_col_4">
                     <div class="container-fluid announce_container">
                         <div class="row announce_box mx-1">
                             <div class="col-md-12">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-4 announcement_col_4">
                     <div class="container-fluid announce_container">
                         <div class="row announce_box mx-1">
                             <div class="col-md-12">
@@ -83,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-4 announcement_col_4">
                     <div class="container-fluid announce_container">
                         <div class="row announce_box mx-1">
                             <div class="col-md-12">

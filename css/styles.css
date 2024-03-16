@@ -1526,6 +1526,10 @@ select {
 		font-weight: 800;
 	}
 
+	.announcement_col_4{
+		padding: 0px !important;
+	}
+
 	.main_slide{
 		padding-bottom: 25px;
 	}
