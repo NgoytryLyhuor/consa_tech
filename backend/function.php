@@ -844,12 +844,13 @@ function announcement_insert() {
         $title = trim($_POST['title']);
         $description = $_POST['description'];
         $date = $_POST['date'];
+        $dateline = $_POST['dateline'];
 
         $banner = rand(1, 999999) . '-' . $_FILES['banner']['name'];
         $path_upload = "./assets/images/announcement/" . $banner;
         move_uploaded_file($_FILES['banner']['tmp_name'], $path_upload);
 
-        $sql_insert = "INSERT INTO tbl_announcement VALUES(null,'$title','$description','$banner','$date','1')";
+        $sql_insert = "INSERT INTO tbl_announcement VALUES(null,'$title','$description','$banner','$date','$dateline','1')";
         $result = $con->query($sql_insert);
 
         if ($result == TRUE) {
@@ -866,6 +867,7 @@ function announcement_update(){
         $id = $_POST['id'];
         $title = trim($_POST['title']);
         $date = $_POST['date'];
+        $dateline = $_POST['dateline'];
         $description = trim($_POST['description']);
 
             if ($_FILES['new_banner']['size'] > 0) {
@@ -877,7 +879,7 @@ function announcement_update(){
                 $banner = $_POST['old_banner'];
             }
         
-        $sql_update = "UPDATE tbl_announcement SET title='$title',description='$description',banner='$banner',date='$date' WHERE id = $id";
+        $sql_update = "UPDATE tbl_announcement SET title='$title',description='$description',banner='$banner',date='$date',dateline='$dateline' WHERE id = $id";
         $result = $con->query($sql_update);
         if ($result == TRUE) {
             header("location:announcement_details.php?update=1");

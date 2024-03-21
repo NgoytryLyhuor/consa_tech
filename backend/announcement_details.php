@@ -54,7 +54,8 @@ include("left_side_bar.php");
                                         <th>Banner</th>
                                         <th>Title</th>
                                         <th>Description</th>
-                                        <th>Date</th>
+                                        <th>Post Date</th>
+                                        <th>Dateline</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -79,6 +80,9 @@ include("left_side_bar.php");
                                                     </td>
                                                     <td align="left" style="width:100px">
                                                         ' . $row['date'] . '
+                                                    </td>
+                                                    <td align="left" style="width:100px">
+                                                        ' . $row['dateline'] . '
                                                     </td>
                                                     <td style="width:150px">
                                                         <a class="btn btn-info waves-effect waves-linght" href="./announcement_update.php?id=' . $row['id'] . '">Update</a>

@@ -36,16 +36,21 @@
                     $result = $con->query($sql_select);
 
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $dateString = $row['date'];
+                        $dateString = $row['dateline'];
                         $dateTimestamp = strtotime($dateString);
                         $formattedDate = date("F j Y", $dateTimestamp);
+
+                        $dateString = $row['date'];
+                        $dateTimestamp = strtotime($dateString);
+                        $formattedDate1 = date("F j Y", $dateTimestamp);
                         echo '
                             <div class="col-lg-4 announcement_col_4">
                                 <div class="container-fluid announce_container">
                                     <div class="row announce_box mx-1">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 position-relative">
                                             <div class="container-fluid p-0 overflow-hidden" style="border-radius: 10px;">
                                                 <img  height="100%" width="100%" class="img_border_radius" height="200px" src="./backend/assets/images/announcement/'.$row['banner'].'" alt="">
+                                                <span class="time">'.$formattedDate1.'</span>
                                             </div>
                                         </div>
                                         <div class="col-md-12 position-relative mt-3">
@@ -53,7 +58,7 @@
                                                 '.$row['title'].'
                                             </h5> 
                                             <p class="announce_des">'.$row['description'].'</p>
-                                            <p class="announce_date" style="text-transform:uppercase">'.$formattedDate.'</p>
+                                            <p class="announce_date" style="text-transform:uppercase">dateline : '.$formattedDate.'</p>
                                         </div>
                                     </div>
                                 </div>

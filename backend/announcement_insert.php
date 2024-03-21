@@ -56,9 +56,16 @@ include("header.php");
                                             </div>
 
                                             <div class="row mb-3">
-                                                <label for="image" class="col-sm-12 col-form-label">Date</label>
+                                                <label for="image" class="col-sm-12 col-form-label">Post Date</label>
                                                 <div class="col-sm-12">
                                                     <input class="form-control" type="date" name="date"required>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="image" class="col-sm-12 col-form-label">Dateline</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="date" name="dateline"required>
                                                 </div>
                                             </div>
 

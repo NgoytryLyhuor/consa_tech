@@ -70,9 +70,16 @@ include("left_side_bar.php");
                                             </div>
 
                                             <div class="row mb-3">
+                                                <label for="image" class="col-sm-12 col-form-label">Dateline</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="date" value="'.$row['dateline'].'" name="dateline"required>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
                                                 <label for="image" class="col-sm-12 col-form-label"></label>
                                                 <div class="col-sm-12">
-                                                    <button type="submit" name="btn_announcement_update" class="btn btn-success waves-effect waves-light">Update News Data</button>
+                                                    <button type="submit" name="btn_announcement_update" class="btn btn-success waves-effect waves-light">Update Data</button>
                                                 </div>
                                             </div>
                                         ';
