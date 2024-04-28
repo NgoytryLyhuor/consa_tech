@@ -147,3 +147,50 @@ function topFunction() {
 	document.documentElement.scrollTop = 0; // for Chrome, Firefox, IE and Opera
 }
 
+// Use for footer
+
+function footer_dropdown() {
+    var dropdownButton = document.getElementById("dropdown_button");
+    var dropdownMenu = document.getElementById("dropdown_items");
+
+    // Check if the window width is below a certain threshold (e.g., 768px for mobile devices)
+    var isMobile = window.innerWidth < 768;
+
+    // Toggle the visibility of the dropdown menu
+    if (dropdownMenu.style.display === "block") {
+        dropdownMenu.style.display = "none";
+    } else {
+        // Display the dropdown menu
+        dropdownMenu.style.display = "block";
+
+        if (isMobile) {
+            // Mobile screen: Center the menu below the button
+            dropdownMenu.style.top = (dropdownButton.offsetTop + dropdownButton.offsetHeight) + "px";
+            dropdownMenu.style.left = "50%";
+            dropdownMenu.style.transform = "translateX(-50%)"; // Center horizontally
+        } else {
+            // Desktop screen: Position the menu to the right of the button
+            dropdownMenu.style.top = dropdownButton.offsetTop + "px";
+            dropdownMenu.style.left = (dropdownButton.offsetLeft + dropdownButton.offsetWidth) + "px";
+            dropdownMenu.style.transform = "translateY(0)"; // Reset transform
+        }
+    }
+}
+
+// Add an event listener to the document to hide the dropdown when clicking outside
+document.addEventListener("click", function(event) {
+    var dropdownButton = document.getElementById("dropdown_button");
+    var dropdownMenu = document.getElementById("dropdown_items");
+
+    // Check if the clicked element is not the dropdown button or the dropdown menu
+    if (event.target !== dropdownButton && !dropdownButton.contains(event.target) &&
+        event.target !== dropdownMenu && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = "none"; // Hide the dropdown menu
+    }
+});
+
+// Update dropdown position when window is resized (e.g., orientation change on mobile)
+window.addEventListener("resize", function() {
+    // Call footer_dropdown() to adjust dropdown position based on new screen size
+    footer_dropdown();
+});

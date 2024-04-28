@@ -58,7 +58,7 @@
                                                 '.$row['title'].'
                                             </h5> 
                                             <p class="announce_des">'.$row['description'].'</p>
-                                            <p class="announce_date" style="text-transform:uppercase">dateline : '.$formattedDate.'</p>
+                                            <p class="announce_date" style="text-transform:uppercase">Deadline : '.$formattedDate.'</p>
                                         </div>
                                     </div>
                                 </div>
