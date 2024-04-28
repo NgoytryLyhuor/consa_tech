@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/styles.scss" rel="stylesheet">
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/logo.png">
