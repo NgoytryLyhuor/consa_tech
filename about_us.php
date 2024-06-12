@@ -48,7 +48,19 @@
                             <h3  style="color: '.$row_color['color'].' !important;">OUR MISSION</h3>
                             <p>'.$row['mission'].'</p>
                         </div>
-                    </div>
+                        <h2 class="mt-5 mb-3 text-uppercase"  style="color: #174C46 !important;">Our customers</h2> <hr size="5px">
+                            <div class="container-fluid p-0">
+
+                ';
+                    $temp_image = explode('+',$row['customer']);
+                    for($i=0 ; $i < count($temp_image) ; $i++){
+                        echo'
+                            <img class="p-1" style="width:150px" src="./backend/assets/images/our_customer_image/'.$temp_image[$i].'" alt="">
+                        ';
+                    }
+                echo'
+                            </div>
+                        </div>
                 ';
             ?>
             </div>

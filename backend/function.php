@@ -311,10 +311,56 @@ function about_us(){
     global $con;
     if (isset($_POST['btn_about_us'])) {
 
+        //-our_customer-----------
+            if($_FILES['customer']['size'] > 0){
+                $sql_select = "SELECT * FROM tbl_about_us WHERE id = 1";
+                $temp_result = $con->query($sql_select);
+                $row = mysqli_fetch_assoc($temp_result);
+                $old_data = $row['customer'];
+
+                $customer = rand(1, 999999) . '-' . $_FILES['customer']['name'];
+                $path_upload = "./assets/images/our_customer_image/" . $customer;
+                move_uploaded_file($_FILES['customer']['tmp_name'], $path_upload);
+                $json_data = $row['customer'].'+'.$customer;
+
+                if($customer != ''){
+                    $sql_update = "UPDATE tbl_about_us SET customer='$json_data' WHERE id = 1";
+                    $result = $con->query($sql_update);
+                }
+            }
+        //-our_customer-----------
+
+        //-delete_image-----
+        $delete_img = $_POST['delete_img'];
+        $temp_delete = explode('+', $delete_img);
+
+        // Fetch old image data from the database
+        $sql_select = "SELECT * FROM tbl_about_us WHERE id = 1";
+        $temp_result = $con->query($sql_select);
+        $row = mysqli_fetch_assoc($temp_result);
+        $temp_old_data = explode('+', $row['customer']);
+
+        // Filter out the images to delete from the old data
+        $new_data_array = array_diff($temp_old_data, $temp_delete);
+
+        // Create a new string of images to save back to the database
+        $new_data = implode('+', $new_data_array);
+
+        // Update the database with the new image data
+        $sql_update = "UPDATE tbl_about_us SET customer = '$new_data' WHERE id = 1";
+        $con->query($sql_update);
+
+        
+        // Update the database
+        $update_sql = "UPDATE tbl_about_us SET customer='$new_data' WHERE id = 1";
+        $con->query($update_sql);
+            
+        //-delete_image-----
+
         $who = trim($_POST['who']);
         $vision = trim($_POST['vision']);
         $mission = trim($_POST['mission']);
-        
+
         $sql_update = "UPDATE tbl_about_us SET who='$who',vision='$vision',mission='$mission' WHERE id = 1";
         $result = $con->query($sql_update);
         if ($result == TRUE) {
@@ -325,7 +371,7 @@ function about_us(){
                         icon: "success",
                         title: "Update Successful",
                         showConfirmButton: false,
-                        timer: 1500
+                        timer: 500
                     })
                 </script>
             ';
@@ -782,7 +828,6 @@ function main_service(){
         }
     }
 }main_service();
-
 
 // title_color
 function title_color(){
