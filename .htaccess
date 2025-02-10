@@ -1,10 +1,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /consa_tech/
+    RewriteBase /
 
-    # Redirect .php URLs to clean URLs
+    # Redirect .php URLs to clean URLs (optional for other files)
     RewriteCond %{THE_REQUEST} \s(.+\.php)\s [NC]
-    RewriteRule ^(.*)\.php$ /consa_tech/$1 [R=301,L]
+    RewriteRule ^(.*)\.php$ /$1 [R=301,L]
 
     # Rewrite clean URLs to corresponding PHP files
     RewriteCond %{REQUEST_FILENAME} !-d
@@ -12,7 +12,7 @@
     RewriteCond %{REQUEST_FILENAME}.php -f
     RewriteRule ^(.*)$ $1.php [L]
 
-    # Fallback to index.php for other routes
+    # Fallback to index.php for undefined routes
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ index.php [L]
