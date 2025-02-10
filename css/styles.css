@@ -802,7 +802,7 @@ select {
 }
 
 .filter .element-item:hover {
-	transform: scale(1.06);
+	/* transform: scale(1.06); */
 }
 
 .filter .element-item a {
@@ -1541,6 +1541,10 @@ select {
 		font-weight: 800;
 	}
 
+	.activity p{
+		text-align: center !important;
+	}
+
 	.announcement_col_4{
 		padding: 0px !important;
 	}
@@ -2078,6 +2082,11 @@ select {
 }
 /* end of min-width 992px */
 
+@media (max-width: 1200px) {
+	.activity{
+		justify-content: center !important;
+	}
+}
 
 /* Min-width 1200px */
 @media (min-width: 1200px) {

@@ -124,24 +124,19 @@ include('./backend/connection.php')
                 ?>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="grid">
-                    <?php
-                    $sql_select = "SELECT * FROM tbl_news WHERE status = 1";
-                    $result = $con->query($sql_select);
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo '    
-                            <div class="element-item development">
-                                <img class="img-fluid" src="./backend/assets/images/news_banner/' . $row['banner'] . '" alt="alternative">
-                                <p><strong style="font-size: 22px;color: #174c46;">' . $row['title'] . '</strong> <br> ' . $row['description'] . '</p>
-                            </div>
-                        ';
-                    }
-                    ?>
-                </div>
-
-            </div>
+        <div class="row d-flex justify-content-start activity">
+            <?php
+                $sql_select = "SELECT * FROM tbl_news WHERE status = 1";
+                $result = $con->query($sql_select);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '    
+                        <div class="col-lg-4 element-item col-md-6">
+                            <img style="width:327px;height:321px" class="img-fluid" src="./backend/assets/images/news_banner/' . $row['banner'] . '" alt="alternative">
+                            <p><strong style="font-size: 22px;color: #174c46;">' . $row['title'] . '</strong> <br> ' . $row['description'] . '</p>
+                        </div>
+                    ';
+                }
+            ?>
         </div>
     </div>
 </div>
